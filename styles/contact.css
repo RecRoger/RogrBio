@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     background: white;
     border: 2px solid black;
-    border-radius: 6px;
+    border-radius: 3px;
     position: relative;
     flex-direction: column;
 }
@@ -29,14 +29,14 @@
 }
 .contact-section__image {
     border: 2px solid black;
-    border-radius: 1.5%;
+    border-radius: 3px;
     min-height: 400px;
 }
 .contact-section__text {
     margin-bottom: 2em;
 }
 .contact-section__decoration {
-    border-radius: 1.5%;
+    border-radius: 3px;
     position: absolute;
     background-color: #35393C;
     width: 60%;
@@ -52,7 +52,7 @@
 }
 .contact-decoration {
     position: absolute;
-    border-radius: 6px;
+    border-radius: 3px;
     z-index: -1 !important;
 }
 .contact-decoration.decoration-1 {
@@ -71,7 +71,7 @@
 }
 .contact-decoration__image {
     border: 1px solid black;
-    border-radius: 6px;
+    border-radius: 3px;
     z-index: 3;
     left: 25%;
     width: 50%;

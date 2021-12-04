@@ -10,7 +10,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
+.main-container {
+    display: grid;
+}
 
 /* -------- HEADER STYLES -------- */
 header {
@@ -134,7 +136,7 @@ h1 {
 }
 h1, h2, h3, h4 {
     padding: .5em;
-    border-radius: 1.5%;
+    border-radius: 3px;
     border: 2px solid black;
     background: #ffffff;
     margin: auto;
@@ -155,7 +157,7 @@ h1, h2, h3, h4 {
 }
 .rg-btn {
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 3px;
     cursor: pointer;
 }
 .text-block {
@@ -165,13 +167,16 @@ h1, h2, h3, h4 {
     background: #ffffff;
     margin: auto;
     padding: 4em;
-    border-radius: 15px;
+    border-radius: 3px;
     border: 2px solid black;
 }
 @media screen and (max-width: 576px) { 
     .text-block p{
         padding: 1em !important;
         font-size: 14px;
+    }
+    .content-section {
+        padding: 1.5rem;
     }
 }
 @media screen and (max-width: 768px) {

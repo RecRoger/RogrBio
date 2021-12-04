@@ -12,133 +12,132 @@
 </head>
 
 <body>
-    <header>
-        <!-- Logo  -->
-        <img class="header-logo" src="../assets/logo_rorg_gray.svg" alt="rogr">
-        <!-- Navegador -->
-        <nav class="header-nav">
-            <ul class="nav">
-                <li class="nav-item"><a href="../index.html">Inicio</a></li>
-                <li class="nav-item"><a href="about.html">Sobre mi</a></li>
-                <li class="nav-item"><a href="skills.html">Conocimientos</a></li>
-                <li class="nav-item"><a href="career.html">Experiencias</a></li>
-                <li class="nav-item active"><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="main-container">
+        <header>
+            <!-- Logo  -->
+            <img class="header-logo" src="../assets/logo_rorg_gray.svg" alt="rogr">
+            <!-- Navegador -->
+            <nav class="header-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a href="about.html">Sobre mi</a></li>
+                    <li class="nav-item"><a href="skills.html">Conocimientos</a></li>
+                    <li class="nav-item"><a href="career.html">Experiencias</a></li>
+                    <li class="nav-item active"><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
+        <!-- Seccion principal -->
+        <section class="content-section">
+            <div class="contact-section__title title-block">
+                <h1>¿Cómo contactarme?</h1>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="contact-section">
 
+                <form method="POST" class="contact-form__container">
+                    <fieldset class="contact-form">
+                        <legend>Escríbeme</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">¿Cómo te llamas? </label>
+                                <input class="form-control" type="text" name="name" id="name" required
+                                    placeholder="Nombre y apellido">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">¿Cuál es tu correo? </label>
+                                <input class="form-control" type="email" name="email" id="email" required
+                                    placeholder="Email">
+                            </div>
 
-    <!-- Seccion principal -->
-    <section class="content-section">
-        <div class="contact-section__title title-block">
-            <h1>¿Cómo contactarme?</h1>
-            <div class="title-decoration"></div>
-        </div>
-        <div class="contact-section">
-
-            <form method="POST" class="contact-form__container">
-                <fieldset class="contact-form">
-                    <legend>Escríbeme</legend>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">¿Cómo te llamas? </label>
-                            <input class="form-control" type="text" name="name" id="name" required
-                                placeholder="Nombre y apellido">
                         </div>
                         <div class="form-group">
-                            <label for="email">¿Cuál es tu correo? </label>
-                            <input class="form-control" type="email" name="email" id="email" required
-                                placeholder="Email">
+                            <label>¿Cómo me conociste?</label>
+                            <div class="control-radio-options">
+                                <label for="in">
+                                    <input type="radio" name="relation" id="in" value="in">
+                                    LinkdIn
+                                </label>
+                                <label for="fb">
+                                    <input type="radio" name="relation" id="fb" value="fb">
+                                    Facebook
+                                </label>
+                                <label for="ig">
+                                    <input type="radio" name="relation" id="ig" value="ig">
+                                    Instagram
+                                </label>
+                                <label for="fn">
+                                    <input type="radio" name="relation" id="fn" value="fn">
+                                    Recomendacion Amigos
+                                </label>
+                                <label for="o">
+                                    <input type="radio" name="relation" id="o" value="o">
+                                    Otra forma
+                                </label>
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label>¿Cómo me conociste?</label>
-                        <div class="control-radio-options">
-                            <label for="in">
-                                <input type="radio" name="relation" id="in" value="in">
-                                LinkdIn
-                            </label>
-                            <label for="fb">
-                                <input type="radio" name="relation" id="fb" value="fb">
-                                Facebook
-                            </label>
-                            <label for="ig">
-                                <input type="radio" name="relation" id="ig" value="ig">
-                                Instagram
-                            </label>
-                            <label for="fn">
-                                <input type="radio" name="relation" id="fn" value="fn">
-                                Recomendacion Amigos
-                            </label>
-                            <label for="o">
-                                <input type="radio" name="relation" id="o" value="o">
-                                Otra forma
-                            </label>
+                        <div class="form-group">
+                            <label for="subject">¿De que deseas hablar? </label>
+                            <input class="form-control" type="text" name="subject" id="subject" required
+                                placeholder="Asunto">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">¿De que deseas hablar? </label>
-                        <input class="form-control" type="text" name="subject" id="subject" required
-                            placeholder="Asunto">
-                    </div>
-                    <div class="form-group">
-                        <label for="size">Cuentame mas:</label>
-                        <textarea class="form-control" name="comment" id="comment" cols="30" rows="10"></textarea>
-                    </div>
-                    <button class="form-btn" type="submit">Enviar</button>
-                </fieldset>
-            </form>
+                        <div class="form-group">
+                            <label for="size">Cuentame mas:</label>
+                            <textarea class="form-control" name="comment" id="comment" cols="30" rows="10"></textarea>
+                        </div>
+                        <button class="form-btn" type="submit">Enviar</button>
+                    </fieldset>
+                </form>
 
-            <div class="contact-section__data">
-                <div class="contact-section__text text-block">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero fuga incidunt blanditiis corrupti
-                        quae.
-                    </p>
+                <div class="contact-section__data">
+                    <div class="contact-section__text text-block">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero fuga incidunt blanditiis
+                            corrupti
+                            quae.
+                        </p>
+                    </div>
+                    <img class="contact-section__image" src="https://picsum.photos/400/400" alt="Rogr">
                 </div>
-                <img class="contact-section__image" src="https://picsum.photos/400/400" alt="Rogr">
+                <div class="contact-section__decoration"></div>
             </div>
-            <div class="contact-section__decoration"></div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact-decoration-section content-section">
-        <div class="contact-decoration decoration-1"></div>
-        <div class="contact-decoration decoration-2"></div>
-        <img class="contact-decoration__image" src="https://picsum.photos/800/600" alt="">
+        <section class="contact-decoration-section content-section">
+            <div class="contact-decoration decoration-1"></div>
+            <div class="contact-decoration decoration-2"></div>
+            <img class="contact-decoration__image" src="https://picsum.photos/800/600" alt="">
 
-    </section>
+        </section>
 
-
-
-    <footer>
-        <div class="footer-info">
-            <img class="footer-logo" src="../assets/logo_rorg_yellow.svg" alt="rogr">
-            <ul class="footer-nav">
-                <li class="nav-item"><a href="about.html">Sobre mi</a></li>
-                <li class="nav-item"><a href="skills.html">Conocimientos</a></li>
-                <li class="nav-item"><a href="career.html">Experiencias</a></li>
-                <li class="nav-item"><a href="contact.html">Contacto</a></li>
-            </ul>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/rogelioarzola/?locale=es_ES" target="blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/rec.roger/" target="blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.link/rjl9o7" target="blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+        <footer>
+            <div class="footer-info">
+                <img class="footer-logo" src="../assets/logo_rorg_yellow.svg" alt="rogr">
+                <ul class="footer-nav">
+                    <li class="nav-item"><a href="about.html">Sobre mi</a></li>
+                    <li class="nav-item"><a href="skills.html">Conocimientos</a></li>
+                    <li class="nav-item"><a href="career.html">Experiencias</a></li>
+                    <li class="nav-item"><a href="contact.html">Contacto</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/rogelioarzola/?locale=es_ES" target="blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rec.roger/" target="blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.link/rjl9o7" target="blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="footer-signature">
-            Web Creada por <b>RecRoger</b> - 11/2021
-        </div>
-    </footer>
+            <div class="footer-signature">
+                Web Creada por <b>RecRoger</b> - 11/2021
+            </div>
+        </footer>
 
+    </div>
 </body>
 
 </html>
