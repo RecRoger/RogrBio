@@ -13,7 +13,15 @@
     width: 350px;
     border: 2px solid black;
     border-radius: 3px;
+    transform: perspective(50px) rotateY(-1deg);
+    animation: rotate-right-back .7s;
 }
+.main-info__image:hover {
+    /* transition: all .25s ease-in; */
+    animation: rotate-right 1s;
+    transform: perspective(50px) rotateY(0);
+}
+
 .main-info__text {
     width: 400px;
 }
@@ -25,6 +33,7 @@
     height: 120%;
     top: -1rem;
     z-index: 1 !important;
+    -webkit-transform: perspective(50px) rotateY(.3deg);
 }
 .jobs-section {
     display: flex;
@@ -39,6 +48,7 @@
     margin: -20px auto;
     background-color: #35393C;
     z-index: 1;
+    -webkit-transform: perspective(50px) rotateY(-.35deg);
 }
 .jobs-section__galery{
     display: flex;
@@ -55,12 +65,26 @@
 }
 .job-img__1{
     background: url('https://picsum.photos/310/220') #ccc;
+    transform: perspective(50px) rotateY(1deg);
+    animation: rotate-left-back .7s;
+}
+.job-img__1:hover {
+    /* transition: all .25s ease-in; */
+    animation: rotate-left 1s;
+    transform: perspective(50px) rotateY(0);
 }
 .job-img__2{
     background: url('https://picsum.photos/310/230') #ccc;
 }
 .job-img__3{
     background: url('https://picsum.photos/310/240') #ccc;
+    transform: perspective(50px) rotateY(-1deg);
+    animation: rotate-right-back .7s;
+}
+.job-img__3:hover {
+    /* transition: all .25s ease-in; */
+    animation: rotate-right 1s;
+    transform: perspective(50px) rotateY(0);
 }
 .job-img>span {
     display: none;
@@ -69,12 +93,18 @@
     margin: 1.5em auto;
 }
 
+
+/***** Responsive Media Queries  *****/
 @media screen and (max-width: 576px) { 
-    .main-info__text, .main-info__image {
+    .main-info__text{
         width: 70%;
     }
     .jobs-section__decoration{
         width: 90%;
+    }
+    .main-info__image {
+        /* transform: perspective(50px) rotateY(0); */
+        width: 70%;
     }
 }
 @media screen and (max-width: 768px) {
@@ -108,5 +138,66 @@
 @media screen and (max-width: 996px) {
     .job-img__3 {
         display: none;    
+    }
+    .job-img__2{
+        transform: perspective(50px) rotateY(-1deg);
+        animation: rotate-right-back .7s;
+    }
+    .job-img__2:hover {
+        /* transition: all .25s ease-in; */
+        animation: rotate-right 1s;
+        transform: perspective(50px) rotateY(0);
+    }
+}
+
+
+
+/***** Animations *****/
+@keyframes rotate-right {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(-1deg);
+                transform: perspective(50px) rotateY(-1deg);
+    }
+    55% {
+        -webkit-transform: perspective(50px) rotateY(.3deg);
+        transform: perspective(50px) rotateY(.3deg);
+    }
+    100% {
+        webkit-transform: perspective(50px) rotateY(0);
+            transform: perspective(50px) rotateY(0);
+    }
+}
+@keyframes rotate-right-back {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(0);
+                transform: perspective(50px) rotateY(0);
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateY(-1deg);
+                transform: perspective(50px) rotateY(-1deg);
+    }
+}
+@keyframes rotate-left {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(1deg);
+                transform: perspective(50px) rotateY(1deg);
+    }
+    55% {
+        -webkit-transform: perspective(50px) rotateY(-.3deg);
+        transform: perspective(50px) rotateY(-.3deg);
+    }
+    100% {
+        webkit-transform: perspective(50px) rotateY(0);
+            transform: perspective(50px) rotateY(0);
+    }
+}
+@keyframes rotate-left-back {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(0);
+                transform: perspective(50px) rotateY(0);
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateY(1deg);
+                transform: perspective(50px) rotateY(1deg);
     }
 }
