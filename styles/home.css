@@ -29,6 +29,7 @@
     border-radius: 3px;
     position: absolute;
     background-color: #35393C;
+    border-left: 3px solid black;
     width: 60%;
     height: 120%;
     top: -1rem;
@@ -49,6 +50,7 @@
     background-color: #35393C;
     z-index: 1;
     -webkit-transform: perspective(50px) rotateY(-.35deg);
+    border-right: 3px solid black;
 }
 .jobs-section__galery{
     display: flex;

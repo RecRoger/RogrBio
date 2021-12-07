@@ -100,10 +100,10 @@ footer {
     border-right: none;
 }
 
-.footer-nav .nav-item a {
+.footer-nav .nav-item a, .footer-social__icon{
     transition: all 0.15s ease-out;
 }
-.footer-nav .nav-item:hover a {
+.footer-nav .nav-item:hover a, .footer-social__icon:hover{
     transform: scale(1.15);
     display: block;
 }
@@ -153,7 +153,7 @@ h1, h2, h3, h4 {
     background: #ffffff;
     margin: auto;
     text-align: center;
-    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 .title-block {
     display: flex;
@@ -169,7 +169,7 @@ h1, h2, h3, h4 {
     height: 40px;
     background-color: #35393C;
     z-index: 1;
-    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 .rg-btn {
     padding: 1em;

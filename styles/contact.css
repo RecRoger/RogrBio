@@ -31,6 +31,12 @@
     border: 2px solid black;
     border-radius: 3px;
     min-height: 400px;
+    transform: perspective(50px) rotateY(1deg);
+    animation: rotate-left-back .7s;
+}
+.contact-section__image:hover {
+    animation: rotate-left 1s;
+    transform: perspective(50px) rotateY(0);
 }
 .contact-section__text {
     margin-bottom: 2em;
@@ -43,12 +49,14 @@
     height: 100%;
     top: -1rem;
     z-index: 1 !important;
+    -webkit-transform: perspective(50px) rotateX(.35deg);
+    border-bottom: 3px solid black;
 }
 .contact-decoration-section {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 4rem;
-        overflow: hidden
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+    overflow: hidden;
 }
 .contact-decoration {
     position: absolute;
@@ -61,6 +69,8 @@
     width: 50%;
     top: 5em;
     left: 14em;
+    -webkit-transform: perspective(50px) rotateY(.35deg);
+    border-left: 3px solid black;
 }
 .contact-decoration.decoration-2 {
     background-color: #35393C;
@@ -68,6 +78,8 @@
     width: 50%;
     bottom: 2em;
     right: 13em;
+    -webkit-transform: perspective(50px) rotateY(-.35deg);
+    border-right: 3px solid black;
 }
 .contact-decoration__image {
     border: 1px solid black;
@@ -132,8 +144,38 @@
         width: 45%;
         height: 70%;
         right: 9rem;
+        -webkit-transform: perspective(50px) rotateX(0) rotateY(-.35deg);
+        border-right: 3px solid black;
     }
     .contact-form__container {
         justify-content: center;
+    }
+}
+
+
+
+
+@keyframes rotate-left {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(1deg);
+                transform: perspective(50px) rotateY(1deg);
+    }
+    55% {
+        -webkit-transform: perspective(50px) rotateY(-.3deg);
+        transform: perspective(50px) rotateY(-.3deg);
+    }
+    100% {
+        webkit-transform: perspective(50px) rotateY(0);
+            transform: perspective(50px) rotateY(0);
+    }
+}
+@keyframes rotate-left-back {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(0);
+                transform: perspective(50px) rotateY(0);
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateY(1deg);
+                transform: perspective(50px) rotateY(1deg);
     }
 }

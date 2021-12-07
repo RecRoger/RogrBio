@@ -10,6 +10,12 @@
     width: 350px;
     border: 2px solid black;
     border-radius: 3px;
+    transform: perspective(50px) rotateY(1deg);
+    animation: rotate-left-back .7s;
+}
+.studies-info__image:hover {
+    animation: rotate-left 1s;
+    transform: perspective(50px) rotateY(0);
 }
 .studies-info__text {
     width: 400px;
@@ -23,6 +29,8 @@
     height: 100%;
     bottom: -9em;
     z-index: 1 !important;
+    -webkit-transform: perspective(50px) rotateX(.35deg);
+    border-bottom: 3px solid black;
 }
 .studies-info__decoration-sm {
     display: none;
@@ -30,7 +38,8 @@
     position: absolute;
     background-color: #16191d;
     z-index: 2 !important;
-
+    -webkit-transform: perspective(50px) rotateX(.35deg);
+    border-bottom: 3px solid black;
 }
 .skills-section {
     display: flex;
@@ -48,6 +57,16 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+.skills-section__card{
+    transform: perspective(50px) rotateX(-1deg);
+    transform-origin: 0 0;
+    animation: rotate-bottom-back .3s;
+}
+.skills-section__card:hover {
+    animation: rotate-bottom .5s;
+    transform-origin: 0 0;
+    transform: perspective(50px) rotateX(0);
 }
 .skills-section__card h4 {
     /* margin: -1em; */
@@ -129,4 +148,55 @@
 }
 @media screen and (max-width: 996px) {
 
+}
+
+
+@keyframes rotate-left {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(1deg);
+                transform: perspective(50px) rotateY(1deg);
+    }
+    55% {
+        -webkit-transform: perspective(50px) rotateY(-.3deg);
+        transform: perspective(50px) rotateY(-.3deg);
+    }
+    100% {
+        webkit-transform: perspective(50px) rotateY(0);
+            transform: perspective(50px) rotateY(0);
+    }
+}
+@keyframes rotate-left-back {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(0);
+                transform: perspective(50px) rotateY(0);
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateY(1deg);
+                transform: perspective(50px) rotateY(1deg);
+    }
+}
+
+@keyframes rotate-bottom {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(-1deg);
+                transform: perspective(50px) rotateX(-1deg);
+    }
+    75% {
+        -webkit-transform: perspective(50px) rotateX(.3deg);
+        transform: perspective(50px) rotateX(.3deg);
+    }
+    100% {
+        webkit-transform: perspective(50px) rotateX(0);
+            transform: perspective(50px) rotateX(0);
+    }
+}
+@keyframes rotate-bottom-back {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(0);
+        transform: perspective(50px) rotateX(0);
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateX(-1deg);
+                transform: perspective(50px) rotateX(-1deg);
+    }
 }
