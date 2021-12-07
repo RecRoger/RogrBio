@@ -13,43 +13,36 @@ body {
 .main-container {
     display: grid;
 }
+a:hover {
+    color: none;
+}
 
 /* -------- HEADER STYLES -------- */
-header {
+.nav-background {
     background-color: #35393C;
     padding: 1rem 2rem;
-    display: flex;
-    /* width: 100%; */
+    /* display: flex; */
 }
 .header-logo {
     width: 200px;
     display: inline-block;
+    margin: 1rem;
 }
-.nav {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.header-nav {
-    color: #EDF2EF;
-    margin-left: auto;
-}
-.nav-item{
+.app-nav-item{
     text-align: center;
     display: inline-block;
     margin: .5rem .5rem;
     padding: .3rem 1rem;
     transition: all .15s ease-out;
 }
-.nav-item a {
+.app-nav-item a {
     text-decoration: none;
     color: #EDF2EF;
 }
-.nav-item.active {
+.app-nav-item.active {
     border-bottom: 3px solid #ffeb3b !important;
 }
-.header-nav .nav-item:hover {
+.header-nav .app-nav-item:hover {
     border-bottom: 3px solid #fff !important;
 }
 
@@ -61,11 +54,6 @@ header {
     }
     .header-logo {
         width: 50%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .nav-item{ 
-        min-width: 140px;
     }
 }
 
@@ -90,9 +78,10 @@ footer {
     width: 110px;
 }
 .footer-nav {
-    padding: 0
+    padding: 0;
+    margin: auto;
 }
-.footer-nav .nav-item {
+.footer-nav .app-nav-item {
     margin: 0;
     border-right: solid 1px #EDF2EF;
 }
@@ -100,10 +89,10 @@ footer {
     border-right: none;
 }
 
-.footer-nav .nav-item a, .footer-social__icon{
+.footer-nav .app-nav-item a, .footer-social__icon {
     transition: all 0.15s ease-out;
 }
-.footer-nav .nav-item:hover a, .footer-social__icon:hover{
+.footer-nav .app-nav-item:hover a, .footer-social__icon:hover {
     transform: scale(1.15);
     display: block;
 }
@@ -160,7 +149,7 @@ h1, h2, h3, h4 {
     flex-direction: column;
     transform: perspective(50px) rotatex(-1deg) translateZ(8px) translate(0, -5px);
     width: 80%;
-    margin: 0px auto 4rem;
+    margin: 1rem auto 4rem;
 }
 .title-decoration {
     border-radius: 3px;

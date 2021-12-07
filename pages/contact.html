@@ -6,25 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | RecRoger</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/contact.css">
-    <script src="https://kit.fontawesome.com/74f86e9c4a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
 </head>
 
 <body>
     <div class="main-container">
         <header>
-            <!-- Logo  -->
-            <img class="header-logo" src="../assets/logo_rorg_gray.svg" alt="rogr">
-            <!-- Navegador -->
-            <nav class="header-nav">
-                <ul class="nav">
-                    <li class="nav-item"><a href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a href="about.html">Sobre mi</a></li>
-                    <li class="nav-item"><a href="skills.html">Conocimientos</a></li>
-                    <li class="nav-item"><a href="career.html">Experiencias</a></li>
-                    <li class="nav-item active"><a href="contact.html">Contacto</a></li>
-                </ul>
+            <nav class="w-100 px-2 py-2 navbar navbar-expand-lg navbar-dark bg-dark">
+                <img class="header-logo" src="../assets/logo_rorg_gray.svg" alt="rogr">
+                <button class="ms-auto navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="ms-auto navbar-nav header-nav">
+                        <li class="nav-item app-nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item app-nav-item">
+                            <a class="nav-link" href="../pages/about.html">Sobre mi</a>
+                        </li>
+                        <li class="nav-item app-nav-item">
+                            <a class="nav-link" href="../pages/skills.html">Conocimientos</a>
+                        </li>
+                        <li class="nav-item app-nav-item">
+                            <a class="nav-link" href="../pages/career.html">Experiencias</a>
+                        </li>
+                        <li class="nav-item app-nav-item active">
+                            <a class="nav-link" href="../pages/contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -86,7 +102,7 @@
                             <label for="size">Cuentame mas:</label>
                             <textarea class="form-control" name="comment" id="comment" cols="30" rows="10"></textarea>
                         </div>
-                        <button class="form-btn" type="submit">Enviar</button>
+                        <button class="btn btn-dark form-btn" type="submit">Enviar</button>
                     </fieldset>
                 </form>
 
@@ -115,10 +131,10 @@
             <div class="footer-info">
                 <img class="footer-logo" src="../assets/logo_rorg_yellow.svg" alt="rogr">
                 <ul class="footer-nav">
-                    <li class="nav-item"><a href="about.html">Sobre mi</a></li>
-                    <li class="nav-item"><a href="skills.html">Conocimientos</a></li>
-                    <li class="nav-item"><a href="career.html">Experiencias</a></li>
-                    <li class="nav-item"><a href="contact.html">Contacto</a></li>
+                    <li class="app-nav-item"><a href="about.html">Sobre mi</a></li>
+                    <li class="app-nav-item"><a href="skills.html">Conocimientos</a></li>
+                    <li class="app-nav-item"><a href="career.html">Experiencias</a></li>
+                    <li class="app-nav-item"><a href="contact.html">Contacto</a></li>
                 </ul>
                 <div class="footer-social">
                     <a class="footer-social__icon" href="https://www.linkedin.com/in/rogelioarzola/?locale=es_ES"
@@ -140,5 +156,8 @@
 
     </div>
 </body>
+
+<script src="https://kit.fontawesome.com/74f86e9c4a.js" crossorigin="anonymous"></script>
+<script src="../scripts/bootstrap.js"></script>
 
 </html>

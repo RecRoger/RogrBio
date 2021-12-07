@@ -60,12 +60,12 @@
 }
 .skills-section__card{
     transform: perspective(50px) rotateX(-1deg);
-    transform-origin: 0 0;
+    transform-origin: top;
     animation: rotate-bottom-back .3s;
 }
 .skills-section__card:hover {
     animation: rotate-bottom .5s;
-    transform-origin: 0 0;
+    transform-origin: top;
     transform: perspective(50px) rotateX(0);
 }
 .skills-section__card h4 {

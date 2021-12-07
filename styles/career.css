@@ -20,7 +20,7 @@
 }
 .experience-section__timeline > div{
     display: flex;
-    margin: 0 3em;
+    margin: 0 4em 0 1rem;
     border: solid 3px black;
     height: 0;
     z-index: 4;
@@ -38,7 +38,7 @@
 .experience-section__timeline-item > span{
     display: block;
     margin-top: -2.3em;
-    width: 38px;
+    width: 58px;
     border: 2px solid black;
     background-color: white;
     padding: .3rem .5rem;
@@ -69,7 +69,7 @@
     border-radius: 3px;
     display: none;
     -webkit-transform: perspective(50px) rotateY(-.35deg);
-    border-right: 3px solid black;
+    border-right: 3px solid #35393C;
 }
 
 .projects-section {
@@ -85,12 +85,34 @@
     flex-wrap: wrap;
     z-index: 1;
 }
+
+
+.project-carousel {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+.carousel-control {
+    z-index: 10;
+    font-size: 35px;
+}
 .projects-section__text {
     width: 400px;
 }
-.projects-section__carousel-image {
-    width: 100%;
+.projects-section__carousel {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
 }
+.projects-section__carousel-image {
+    /* width: 10%; */
+}
+.carousel-control-icon {
+    color: black;
+}
+
+
+
 .projects-section__decoration {
     position: absolute;
     border-radius: 3px;
@@ -103,7 +125,7 @@
     top: 1em;
     left: 14em;
     -webkit-transform: perspective(50px) rotateY(.35deg);
-    border-left: 3px solid black;
+    border-left: 5px solid #35393C;
 }
 .projects-section__decoration.decoration-2 {
     background-color: #35393C;
@@ -125,10 +147,27 @@
      width: 20%;
      padding: 3rem 0 2rem !important
  }
- .experience-section__image, .projects-section__carousel {
+ .experience-section__image, .project-carousel {
      width: 80%;
      height: auto;
+    }
+    
+.project-carousel{
+    width: 100%;
+    height: auto;
  }
+ .projects-section__text {
+    width: auto;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    width: 50%;
+}
+.projects-section__carousel-image {
+    width: 70% !important;
+    height: auto !important;
+    margin-bottom: auto !important;
+    margin-right: -40% !important;
+}
 }
 @media screen and (max-width: 996px) {
     .experience-section__container {
@@ -174,8 +213,9 @@
         padding-top: 2rem
     }
     .projects-section__text {
-        width: 70%;
-        margin-top: 1rem
+        width: auto;
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
     .projects-section__decoration.decoration-1{
         width: 80%;
@@ -189,6 +229,10 @@
         width: 100%;
         bottom: 1em;
         right: 0;
+    }
+
+    .projects-section__carousel-image {
+        width: 40%;
     }
 
 }
