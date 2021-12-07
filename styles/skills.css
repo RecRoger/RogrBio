@@ -18,7 +18,7 @@
     transform: perspective(50px) rotateY(0);
 }
 .studies-info__text {
-    width: 400px;
+    max-width: 400px;
     margin-left: 5em;
 }
 .studies-info__decoration{
@@ -47,7 +47,6 @@
 }
 .skills-section__container {
     display: flex;
-    padding: 3em 0;
     align-items: flex-start;
     justify-content: space-around;
 }

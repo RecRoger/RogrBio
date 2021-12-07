@@ -28,12 +28,13 @@
     justify-content: space-between;
 }
 .experience-section__timeline-item {
-    height: 30px;
+    height: 37px;
     width: 30px;
     background: white;
     border-radius: 50%;
     z-index: 4;
     border: 3px solid black;
+    margin-top: -20px;
 }
 .experience-section__timeline-item > span{
     display: block;
@@ -70,6 +71,7 @@
     display: none;
     -webkit-transform: perspective(50px) rotateY(-.35deg);
     border-right: 3px solid #35393C;
+    z-index: -1;
 }
 
 .projects-section {
@@ -85,12 +87,11 @@
     flex-wrap: wrap;
     z-index: 1;
 }
-
-
 .project-carousel {
     display: flex;
     width: 100%;
-    align-items: stretch;
+    min-height: 450px;
+    align-items: center;
 }
 .carousel-control {
     z-index: 10;
@@ -140,7 +141,7 @@
 
 @media screen and (max-width: 576px) { 
  .experience-section__data {
-     padding: auto 0 !important;
+     margin: auto !important;
      width: 60% !important;
 }
 .experience-section__timeline {
@@ -181,13 +182,14 @@
         width: 85%;
         height: 60%;
         top: 8rem;
+        left: 2rem
     }
     .experience-section__image{
         border: 2px solid black;
     }
     .experience-section__info{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
     .experience-section__timeline {
         width: 30%;
@@ -204,6 +206,9 @@
         width: 0;
         flex-direction: column;
         margin: auto;
+    }
+    .experience-section__timeline-item {
+        margin-left: -20px !important;
     }
     .projects-section {
         margin-top: -1rem
@@ -230,7 +235,9 @@
         bottom: 1em;
         right: 0;
     }
-
+    .project-carousel {
+        min-height: 260px;
+    }
     .projects-section__carousel-image {
         width: 40%;
     }

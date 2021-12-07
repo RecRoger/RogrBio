@@ -51,31 +51,101 @@
             </div>
             <div class="experience-section__container">
                 <div class="experience-section__info">
-                    <div class="experience-section__data">
-                        <div class="experience-section__decoration"></div>
-                        <img class="experience-section__image" src="https://picsum.photos/400/400" alt="">
-                        <div class="experience-section__text text-block">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat magni deleniti ipsa
-                                perferendis nam dicta! Nisi ut eos deleniti molestias, nemo itaque voluptatum eius a
-                                dolor dolore ullam aspernatur officiis.</p>
-                        </div>
-                    </div>
-                    <!-- Linea de tiempo -->
                     <div class="experience-section__timeline">
-                        <div>
-                            <div class="experience-section__timeline-item active"><span>2015</span></div>
-                            <div class="experience-section__timeline-item"><span>2016</span></div>
-                            <div class="experience-section__timeline-item"><span>2017</span></div>
-                            <div class="experience-section__timeline-item"><span>2018</span></div>
+                        <div class="nav" role="tablist">
+                            <button class="experience-section__timeline-item nav-link active" id="pill-2015-tab"
+                                data-bs-toggle="pill" data-bs-target="#pill-2015" type="button" role="tab"
+                                aria-controls="pill-2015" aria-selected="true">
+                                <span>2015</span>
+                            </button>
+                            <button class="experience-section__timeline-item nav-link" id="pill-2016-tab"
+                                data-bs-toggle="tab" data-bs-target="#pill-2016" type="button" role="tab"
+                                aria-controls="pill-2016" aria-selected="false">
+                                <span>2016</span>
+                            </button>
+                            <button class="experience-section__timeline-item nav-link" id="pill-2017-tab"
+                                data-bs-toggle="tab" data-bs-target="#pill-2017" type="button" role="tab"
+                                aria-controls="pill-2017" aria-selected="false">
+                                <span>2017</span>
+                            </button>
+                            <button class="experience-section__timeline-item nav-link" id="pill-2018-tab"
+                                data-bs-toggle="tab" data-bs-target="#pill-2018" type="button" role="tab"
+                                aria-controls="pill-2018" aria-selected="false">
+                                <span>2018</span>
+                            </button>
                         </div>
                     </div>
+                    <div class="tab-content position-relative" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pill-2015" role="tabpanel"
+                            aria-labelledby="pill-2015-tab">
+                            <div class="experience-section__data">
+                                <img class="experience-section__image" src="https://picsum.photos/400/400" alt="">
+                                <div class="experience-section__text text-block">
+                                    <p>2015 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat magni
+                                        deleniti
+                                        ipsa
+                                        perferendis nam dicta! Nisi ut eos deleniti molestias, nemo itaque voluptatum
+                                        eius a
+                                        dolor dolore ullam aspernatur officiis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pill-2016" role="tabpanel" aria-labelledby="pill-2016-tab">
+                            <div class="experience-section__data">
+                                <img class="experience-section__image" src="https://picsum.photos/400/400" alt="">
+                                <div class="experience-section__text text-block">
+                                    <p>2016 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat magni
+                                        deleniti
+                                        ipsa
+                                        perferendis nam dicta! Nisi ut eos deleniti molestias, nemo itaque voluptatum
+                                        eius a
+                                        dolor dolore ullam aspernatur officiis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pill-2017" role="tabpanel" aria-labelledby="pill-2017-tab">
+                            <div class="experience-section__data">
+                                <img class="experience-section__image" src="https://picsum.photos/400/400" alt="">
+                                <div class="experience-section__text text-block">
+                                    <p>2017 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat magni
+                                        deleniti
+                                        ipsa
+                                        perferendis nam dicta! Nisi ut eos deleniti molestias, nemo itaque voluptatum
+                                        eius a
+                                        dolor dolore ullam aspernatur officiis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pill-2018" role="tabpanel" aria-labelledby="pill-2018-tab">
+                            <div class="experience-section__data">
+                                <img class="experience-section__image" src="https://picsum.photos/400/400" alt="">
+                                <div class="experience-section__text text-block">
+                                    <p>2018 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat magni
+                                        deleniti
+                                        ipsa
+                                        perferendis nam dicta! Nisi ut eos deleniti molestias, nemo itaque voluptatum
+                                        eius a
+                                        dolor dolore ullam aspernatur officiis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-section__decoration"></div>
+
+                    </div>
+
                 </div>
 
             </div>
         </section>
 
         <section class="projects-section">
-            <h2>Proyectos</h2>
+            <div class="title-block mb-3">
+                <h2>Proyectos</h2>
+            </div>
             <div class="projects-section__data">
                 <!-- Esto debera ser como un carousel -->
 

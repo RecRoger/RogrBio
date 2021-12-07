@@ -92,7 +92,7 @@
     display: none;
 }
 .job-section__btn {
-    margin: 1.5em auto;
+    margin: 4.5rem auto 0;
 }
 
 
@@ -130,11 +130,14 @@
         margin-bottom: -40%;
     }
     .jobs-section__decoration {
-        height: 115%;
+        height: 100%;
         top: 4rem;
     }
     .job-img {
         margin-bottom: 1.5rem;
+    }
+    .job-section__btn {
+        margin: 1.5rem auto 0;
     }
 }
 @media screen and (max-width: 996px) {

@@ -52,58 +52,55 @@
             </div>
             <div class="contact-section">
 
-                <form method="POST" class="contact-form__container">
-                    <fieldset class="contact-form">
-                        <legend>Escríbeme</legend>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">¿Cómo te llamas? </label>
-                                <input class="form-control" type="text" name="name" id="name" required
-                                    placeholder="Nombre y apellido">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">¿Cuál es tu correo? </label>
-                                <input class="form-control" type="email" name="email" id="email" required
-                                    placeholder="Email">
-                            </div>
-
+                <form method="POST" class="contact-form__container row">
+                    <div class="title-block contact-form__title">
+                        <h4>Escribeme</h4>
+                        <div class="title-decoration"></div>
+                    </div>
+                    <div class="form-floating form-group  col-12 col-md-6 mb-3">
+                        <input class="form-control" type="text" name="name" id="name" required
+                            placeholder="Nombre y apellido">
+                        <label for="name" class="ps-4">¿Cómo te llamas? </label>
+                    </div>
+                    <div class="form-floating form-group  col-12 col-md-6 mb-3">
+                        <input class="form-control" type="email" name="email" id="email" required placeholder="Email">
+                        <label for="email" class="ps-4">¿Cuál es tu correo? </label>
+                    </div>
+                    <div class="form-row col-12 mb-4">
+                        <label>¿Cómo me conociste?</label>
+                        <div class="control-radio-options h6 px-2">
+                            <label for="in">
+                                <input type="radio" name="relation" id="in" value="in">
+                                LinkdIn
+                            </label>
+                            <label for="fb">
+                                <input type="radio" name="relation" id="fb" value="fb">
+                                Facebook
+                            </label>
+                            <label for="ig">
+                                <input type="radio" name="relation" id="ig" value="ig">
+                                Instagram
+                            </label>
+                            <label for="fn">
+                                <input type="radio" name="relation" id="fn" value="fn">
+                                Recomendacion Amigos
+                            </label>
+                            <label for="o">
+                                <input type="radio" name="relation" id="o" value="o">
+                                Otra forma
+                            </label>
                         </div>
-                        <div class="form-group">
-                            <label>¿Cómo me conociste?</label>
-                            <div class="control-radio-options">
-                                <label for="in">
-                                    <input type="radio" name="relation" id="in" value="in">
-                                    LinkdIn
-                                </label>
-                                <label for="fb">
-                                    <input type="radio" name="relation" id="fb" value="fb">
-                                    Facebook
-                                </label>
-                                <label for="ig">
-                                    <input type="radio" name="relation" id="ig" value="ig">
-                                    Instagram
-                                </label>
-                                <label for="fn">
-                                    <input type="radio" name="relation" id="fn" value="fn">
-                                    Recomendacion Amigos
-                                </label>
-                                <label for="o">
-                                    <input type="radio" name="relation" id="o" value="o">
-                                    Otra forma
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">¿De que deseas hablar? </label>
-                            <input class="form-control" type="text" name="subject" id="subject" required
-                                placeholder="Asunto">
-                        </div>
-                        <div class="form-group">
-                            <label for="size">Cuentame mas:</label>
-                            <textarea class="form-control" name="comment" id="comment" cols="30" rows="10"></textarea>
-                        </div>
-                        <button class="btn btn-dark form-btn" type="submit">Enviar</button>
-                    </fieldset>
+                    </div>
+                    <div class="form-floating form-group col-12 mb-3">
+                        <input class="form-control" type="text" name="subject" id="subject" required
+                            placeholder="Asunto">
+                        <label for="subject" class="ps-4">¿De que deseas hablar? </label>
+                    </div>
+                    <div class="form-floating form-group  col-12 mb-3">
+                        <textarea class="form-control" name="comment" id="comment" placeholder="Comentario"></textarea>
+                        <label for="comment" class="ps-4">Cuentame mas:</label>
+                    </div>
+                    <button class="btn btn-dark mx-auto w-50 mt-2" type="submit">Enviar</button>
                 </form>
 
                 <div class="contact-section__data">
@@ -116,6 +113,7 @@
                     </div>
                     <img class="contact-section__image" src="https://picsum.photos/400/400" alt="Rogr">
                 </div>
+
                 <div class="contact-section__decoration"></div>
             </div>
         </section>
