@@ -15,15 +15,20 @@
 <body>
     <div class="main-container">
         <header>
-            <nav class="w-100 px-2 py-2 navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="w-100 p-2 navbar navbar-expand-lg navbar-dark bg-dark">
                 <img class="header-logo" src="../assets/logo_rorg_gray.svg" alt="rogr">
-                <button class="ms-auto navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="ms-auto navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="ms-auto navbar-nav header-nav">
+                <div class="offcanvas offcanvas-end nav-links bg-dark" tabindex="-1" id="navbarOffcanvasLg"
+                    aria-labelledby="navbarOffcanvasLgLabel">
+                    <div class="navbar-sm-header pr-4p-2">
+                        <img class="header-logo" src="../assets/logo_rorg_gray.svg" alt="rogr">
+                        <button type="button" class="btn-close text-reset me-4" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <ul class="navbar-nav header-nav">
                         <li class="nav-item app-nav-item">
                             <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
@@ -40,6 +45,11 @@
                             <a class="nav-link" href="../pages/contact.html">Contacto</a>
                         </li>
                     </ul>
+                    <div class="navbar-sm-footer">
+                        <div class="footer-signature">
+                            Web Creada por <b>RecRoger</b> - 11/2021
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -53,24 +63,24 @@
                 <div class="experience-section__info">
                     <div class="experience-section__timeline">
                         <div class="nav" role="tablist">
-                            <button class="experience-section__timeline-item nav-link active" id="pill-2015-tab"
+                            <button class="experience-section__timeline-item active" id="pill-2015-tab"
                                 data-bs-toggle="pill" data-bs-target="#pill-2015" type="button" role="tab"
                                 aria-controls="pill-2015" aria-selected="true">
                                 <span>2015</span>
                             </button>
-                            <button class="experience-section__timeline-item nav-link" id="pill-2016-tab"
-                                data-bs-toggle="tab" data-bs-target="#pill-2016" type="button" role="tab"
-                                aria-controls="pill-2016" aria-selected="false">
+                            <button class="experience-section__timeline-item" id="pill-2016-tab" data-bs-toggle="tab"
+                                data-bs-target="#pill-2016" type="button" role="tab" aria-controls="pill-2016"
+                                aria-selected="false">
                                 <span>2016</span>
                             </button>
-                            <button class="experience-section__timeline-item nav-link" id="pill-2017-tab"
-                                data-bs-toggle="tab" data-bs-target="#pill-2017" type="button" role="tab"
-                                aria-controls="pill-2017" aria-selected="false">
+                            <button class="experience-section__timeline-item" id="pill-2017-tab" data-bs-toggle="tab"
+                                data-bs-target="#pill-2017" type="button" role="tab" aria-controls="pill-2017"
+                                aria-selected="false">
                                 <span>2017</span>
                             </button>
-                            <button class="experience-section__timeline-item nav-link" id="pill-2018-tab"
-                                data-bs-toggle="tab" data-bs-target="#pill-2018" type="button" role="tab"
-                                aria-controls="pill-2018" aria-selected="false">
+                            <button class="experience-section__timeline-item" id="pill-2018-tab" data-bs-toggle="tab"
+                                data-bs-target="#pill-2018" type="button" role="tab" aria-controls="pill-2018"
+                                aria-selected="false">
                                 <span>2018</span>
                             </button>
                         </div>
