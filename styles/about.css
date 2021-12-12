@@ -176,6 +176,10 @@
     .job-img__3 {
         display: none;    
     }
+    .about-section__image, .interests-section__image {
+        width: 40%;
+        height: fit-content;
+    }
 }
 
 
