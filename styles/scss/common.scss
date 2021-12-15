@@ -30,7 +30,7 @@ header {
 
     &-nav {
         .app-nav-item:hover {
-            border-bottom: 3px solid #fff !important;
+            border-bottom: 3px solid $color-white !important;
         }
     
         &.navbar-nav {
@@ -39,7 +39,7 @@ header {
     }
 }
 .nav-background {
-    background-color: #35393C;
+    background-color: $color-gray !important;
     padding: 1rem 2rem;
 }
 .app-nav-item{
@@ -51,11 +51,11 @@ header {
     
     a {
         text-decoration: none;
-        color: #EDF2EF;
+        color: $color-white;
     }
     
     &.active {
-        border-bottom: 3px solid #ffeb3b !important;
+        border-bottom: 3px solid $color-light !important;
     }
 }
 .navbar-sm-header, .navbar-sm-footer {
@@ -74,20 +74,20 @@ header {
 
 @media screen and (max-width: 992px) { 
     .navbar-sm-header {
-        background-color: #35393C;
+        background-color: $color-gray;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .nav-links {
-        background-color: white !important;
+        background-color: $color-white !important;
         width: 100%;
     }
     .navbar-nav.header-nav {
         margin: auto;
     }
     .nav-link {
-        color: black !important;
+        color: $color-black !important;
         font-size: 25px;
     }
     .navbar-sm-footer {
@@ -99,8 +99,8 @@ header {
 
 /* -------- FOOTER STYLES -------- */
 footer {
-    background-color: #35393C;
-    color: #EDF2EF;
+    background-color: $color-gray;
+    color: $color-white;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@ footer {
         
         .app-nav-item {
             margin: 0;
-            border-right: solid 1px #EDF2EF;
+            border-right: solid 1px $color-white;
         }
 
         :last-child {
@@ -153,7 +153,7 @@ footer {
         }
         &>a{
             text-decoration: none;
-            color: #EDF2EF;
+            color: $color-white;
             font-size: 32px;
         }
 
@@ -163,7 +163,7 @@ footer {
         margin: 0 2em;
         padding: 1em 2em;
         text-align: center;
-        border-top: 2px solid #EDF2EF
+        border-top: 2px solid $color-white
     }
 
 }
@@ -191,11 +191,11 @@ h1 {
 }
 h1, h2, h3, h4 {
     padding: 0.5em;
-    border-radius: 3px;
-    border: 1px solid black;
-    background: #ffffff;
+    border-radius: $border-radius;
+    border: $border-thin;
+    background: $color-white;
     text-align: center;
-    border-top: 3px solid black;
+    border-top: $border-bold;
 }
 .title {
     &-block {
@@ -207,29 +207,29 @@ h1, h2, h3, h4 {
         align-items: center;
     }
     &-decoration {
-        border-radius: 3px;
+        border-radius: $border-radius;
         width: 80%;
         margin-top: -20px;
         height: 40px;
-        background-color: #35393C;
+        background-color: $color-gray;
         z-index: 1;
-        border-top: 3px solid black;
+        border-top: $border-bold;
     }
 }
 .rg-btn {
     padding: 1em;
-    border-radius: 3px;
+    border-radius: $border-radius;
     cursor: pointer;
 }
 .text-block {
     display: flex;
 }
 .text-block p{
-    background: #ffffff;
+    background: $color-white;
     margin: auto;
     padding: 4em;
-    border-radius: 3px;
-    border: 2px solid black;
+    border-radius: $border-radius;
+    border: $border-normal;
 }
 @media screen and (max-width: 576px) { 
     .text-block p{
