@@ -23,6 +23,7 @@
                 transform: perspective(50px) rotateY(-1deg);
     }
 }
+
 @keyframes rotate-left {
     0% {
         -webkit-transform: perspective(50px) rotateY(1deg);
@@ -45,5 +46,30 @@
     100% {
         -webkit-transform: perspective(50px) rotateY(1deg);
                 transform: perspective(50px) rotateY(1deg);
+    }
+}
+
+@keyframes rotate-bottom {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(-1deg);
+                transform: perspective(50px) rotateX(-1deg);
+    }
+    75% {
+        -webkit-transform: perspective(50px) rotateX(.3deg);
+        transform: perspective(50px) rotateX(.3deg);
+    }
+    100% {
+        webkit-transform: perspective(50px) rotateX(0);
+            transform: perspective(50px) rotateX(0);
+    }
+}
+@keyframes rotate-bottom-back {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(0);
+        transform: perspective(50px) rotateX(0);
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateX(-1deg);
+                transform: perspective(50px) rotateX(-1deg);
     }
 }

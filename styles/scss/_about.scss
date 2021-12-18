@@ -1,0 +1,193 @@
+/* ----------- ABOUT US STYLES --------- */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__info {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__image {
+        width: 400px;
+        border: $border-normal;
+        border-radius: $border-radius;
+        transform: perspective(50px) rotateY(1deg);
+        animation: rotate-left-back .7s;
+        &:hover {
+            animation: rotate-left 1s;
+            transform: perspective(50px) rotateY(0);
+        }
+    }
+    &__text {
+        width: 400px;
+    }
+    &__decoration {
+        position: absolute;
+        width: 55%;
+        height: 455px;
+        border-radius: $border-radius;
+        top: 215px;
+        background-color: $color-dark;
+        z-index: 1;
+        -webkit-transform: perspective(50px) rotateY(-.35deg);
+        border-right: $border-bold;
+    }
+}
+
+.interests-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    &__title {
+        margin-bottom: -1em !important;
+        .title-decoration{
+            height: 80px;
+        }
+    }
+    &__info {
+        max-width: 500px;
+        margin-right: 3rem;
+    }
+    &__image {
+        width: 400px;
+        height: 400px;
+        border: $border-normal;
+        border-radius: $border-radius;
+        transform: perspective(50px) rotateY(-1deg);
+        animation: rotate-right-back .7s;
+        &:hover {
+            animation: rotate-right 1s;
+            transform: perspective(50px) rotateY(0);
+        }
+    }
+    &__decoration {
+        position: absolute;
+        border-radius: $border-radius;
+        background-color: $color-gray;
+        display: none;
+        -webkit-transform: perspective(50px) rotateY(-.35deg);
+        border-right: $border-bold;
+    }
+}
+
+.about-close-section {
+    position: relative;
+    margin: 0 3em 3em 3em;
+    display: flex;
+    z-index: 1;
+    &__decoration {
+        position: absolute;
+        width: 35%;
+        height: 216px;
+        border-radius: $border-radius;
+        top: -100px;
+        right: 11rem;
+        background-color: $color-gray;
+        -webkit-transform: perspective(50px) rotateY(.35deg);
+        border-left: $border-bold;
+    }
+    &>.text-block{
+        max-width: 780px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 576px) { 
+    .about-section__image, .about-section__text {
+        width: 70%;
+    }
+    .interests-section{
+        &__text {
+            margin-right: 70px !important;
+            width: 70%;
+        }
+        &__decoration{
+            height: 75%;
+        }
+        &__image {
+            width: 70%;
+        }
+    }
+    .about-close-section__decoration {
+        height: 120px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .about-section {
+        &__decoration{
+            width: 70%;
+            height: 80%;
+            left: 2rem;
+            top: 12rem;
+        }
+        &__info{
+            flex-direction: column;
+            margin: 0;
+        }
+        &__text {
+            margin-left: auto;
+            z-index: 4;
+            min-height: 250px;
+            margin-top: -157px;
+        }
+        &__image {
+            margin-right: auto;
+            z-index: 3;
+        }
+    }
+
+    .interests-section {
+        align-items: center;
+        flex-direction: column;
+        &__info {
+            margin: auto;
+            /* margin-bottom: -40px; */
+        }
+        &__text {
+            margin-right: 150px;
+            margin-top: 2em;
+        }
+        &__image{
+            /* width: 60%; */
+            height: auto;
+            align-self: end;
+            margin-top: -134px;
+            z-index: 1;
+        }
+        &__title .title-decoration{
+            display: none;
+        }
+    
+        &__decoration{
+            width: 60%;
+            height: 80%;
+            top: 117px;
+            left: 30%;
+            display: block;
+            z-index: -1;
+        }
+    }
+    .about-close-section {
+        z-index: 3;
+        margin: 2em 3em 3em 3em;
+        
+        &__decoration {
+            width: 60%;
+            height: 100px;
+            top: 70px;
+            left: 20%;
+        }
+    }
+
+}
+@media screen and (max-width: 996px) {
+    .job-img__3 {
+        display: none;    
+    }
+    .about-section__image, .interests-section__image {
+        width: 40%;
+        height: fit-content;
+    }
+}
