@@ -1,11 +1,10 @@
 /* ----------- ABOUT US STYLES --------- */
 .about-section {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
+    
     position: relative;
     &__info {
-        display: flex;
-        justify-content: space-around;
+        @include flex(row, space-around);
     }
     &__image {
         width: 400px;
@@ -35,9 +34,7 @@
 }
 
 .interests-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    @include flex(row, space-evenly, auto, flex-start);
     &__title {
         margin-bottom: -1em !important;
         .title-decoration{
@@ -73,7 +70,7 @@
 .about-close-section {
     position: relative;
     margin: 0 3em 3em 3em;
-    display: flex;
+    @include flex();
     z-index: 1;
     &__decoration {
         position: absolute;

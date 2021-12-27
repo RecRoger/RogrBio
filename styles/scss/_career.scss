@@ -9,24 +9,20 @@
         border-radius: $border-radius;
     }
     &__info {
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
         background: $color-white;
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
+        border-radius: $border-radius;
     }
     &__timeline {
         width: 100%;
         margin: 0 auto;
         padding: 3.5em 0 1.5em;
         &>div{
-            display: flex;
+            @include flex(row, space-between, inherit, center);
             margin: 0 4em 0 1rem;
             border: $border-bold;
             height: 0;
             z-index: 4;
-            align-items: center;
-            justify-content: space-between;
         }
         &-item {
             height: 37px;
@@ -52,9 +48,8 @@
     }
     &__data {
         position: relative;
-        display: flex;
         padding: 2em;
-        justify-content: space-around;
+        @include flex(row, space-around);
         flex-wrap: wrap;
     }
     &__image {
@@ -83,24 +78,21 @@
 
 
 .projects-section {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
+
     margin: -4em 3em 3em;
     &__data {
-        position: relative;
-        display: flex;
-        padding: 3em 0;
-        justify-content: space-around;
+        @include flex(row, space-around);
         flex-wrap: wrap;
+        position: relative;
+        padding: 3em 0;
         z-index: 1;
     }
     &__text {
         width: 400px;
     }
     &__carousel {
-        display: flex !important;
-        justify-content: space-around;
-        align-items: center;
+        @include flex(row, space-around, inherit, center);        
     }
     &__decoration {
         position: absolute;
@@ -127,16 +119,23 @@
     }
 }
 .carousel {
-    display: flex;
     width: 100%;
     min-height: 450px;
-    align-items: center;
+    
+    @include flex(row, inherit, inherit, center);
+
     &-control {
         z-index: 10;
         font-size: 35px;
     }
     &-control-icon {
-        color: black;
+        @include flex(row, center, center, center);
+        
+        color: $color-black;
+        background: $color-white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
     }
 }
 
@@ -181,7 +180,7 @@
 @media screen and (max-width: 996px) {
     .experience-section {
         &__container {
-            background-color: none;
+            background-color: transparent;
             margin: 0;
             width: 100%;
             padding: 0;
@@ -197,8 +196,8 @@
             border: $border-normal;
         }
         &__info{
-            display: flex;
-            flex-direction: row;
+            @include flex(row);
+            background-color: transparent;
         }
         &__timeline {
             width: 30%;
@@ -209,10 +208,9 @@
             -webkit-transform: perspective(50px) rotateY(.35deg);
             border-left: $border-bold;
             &>div {
-                display: flex;
+                @include flex(column);
                 height: 90%;
                 width: 0;
-                flex-direction: column;
                 margin: auto;
             }
             &-item {

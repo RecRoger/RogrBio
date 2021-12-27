@@ -1,14 +1,12 @@
 /* ----------- CONTACT STYLES --------- */
 .contact-section{
     position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
+    @include flex(row, space-around, center, center);
+
     &__data {
         width: 400px;
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
+        
     }
     &__image {
         border: $border-normal;
@@ -39,16 +37,15 @@
 }
 
 .contact-form {
+    @include flex(column);
+    
     width: 450px;
-    display: flex;
-    /* margin: 1em 2em; */
     padding: 1em 1.5em;
     flex-wrap: wrap;
     background: $color-white;
     border: $border-normal;
     border-radius: $border-radius;
     position: relative;
-    flex-direction: column;
     &__container{
         max-width: 716px;
         background-color: $color-white;
@@ -68,8 +65,7 @@
     border-radius: $border-radius;
     z-index: -1 !important;
     &-section {
-        display: flex;
-        justify-content: center;
+        @include flex(row, center);
         padding-left: 4rem;
         overflow: hidden;
     }

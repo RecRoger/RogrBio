@@ -4,11 +4,10 @@
 }
 
 .main-info{
+    @include flex(row, space-around, center);
     position: relative;
-    display: flex;
+    
     margin: 3em 0;
-    justify-content: space-around;
-    align-content: center;
     
     &__image {
         width: 350px;
@@ -17,7 +16,6 @@
         transform: perspective(50px) rotateY(-1deg);
         animation: rotate-right-back .7s;
         &:hover {
-            /* transition: all .25s ease-in; */
             animation: rotate-right 1s;
             transform: perspective(50px) rotateY(0);
         }
@@ -28,19 +26,19 @@
     &__decoration{
         border-radius: $border-radius;
         position: absolute;
-        background-color: $color-gray;
-        border-left: $border-bold;
         width: 60%;
         height: 120%;
         top: -1rem;
         z-index: 1 !important;
         -webkit-transform: perspective(50px) rotateY(.3deg);
+        @extend .glass-decoration;
+        @extend .glass-decoration--left;
     }
 }
 
 .jobs-section {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
+
     margin-bottom: 2em;
 
     &__decoration {
@@ -49,15 +47,14 @@
         height: 330px;
         border-radius: $border-radius;
         margin: -20px auto;
-        background-color: $color-gray;
         z-index: 1;
         -webkit-transform: perspective(50px) rotateY(-.35deg);
-        border-right: $border-bold;
+        @extend .glass-decoration;
+        @extend .glass-decoration--right;
     }
     &__galery{
-        display: flex;
+        @include flex(row, space-evenly);
         position: relative;
-        justify-content: space-evenly;
         flex-wrap: wrap;
     }
     .jobs-section__btn {
@@ -156,7 +153,6 @@
             transform: perspective(50px) rotateY(-1deg);
             animation: rotate-right-back .7s;
             &:hover {
-                /* transition: all .25s ease-in; */
                 animation: rotate-right 1s;
                 transform: perspective(50px) rotateY(0);
             }

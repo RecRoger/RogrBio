@@ -1,10 +1,9 @@
 /* ----------- SKILLS STYLES --------- */
 .studies-info{
+    @include flex(row, center, center, center);
     position: relative;
-    display: flex;
     margin: 3em 0;
-    justify-content: center;
-    align-content: center;
+
     &__image {
         width: 350px;
         border: $border-normal;
@@ -43,18 +42,13 @@
 }
 
 .skills-section {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     &__container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-around;
+        @include flex(row, space-around, inherit, flex-start);
     }
     &__card {
-        display: flex;
+        @include flex(column, inherit, inherit, center);
         width: 25%;
-        flex-direction: column;
-        align-items: center;
         position: relative;
         transform: perspective(50px) rotateX(-1deg);
         transform-origin: top;
@@ -143,8 +137,7 @@
 
     .skills-section {
         &__container {
-            flex-direction: column;
-            align-items: center;
+            @include flex(column, space-around, inherit, center)
         }
         &__decoration-sm {
             display: block;

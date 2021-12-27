@@ -4,43 +4,47 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(column);
 }
 .main-container {
     display: grid;
+    background-image: url('../assets/background.jpg');    
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 a:hover {
-    color: none;
+    text-decoration: none;
+    color: none !important;
 }
 
 /* -------- HEADER STYLES -------- */
 header {
     z-index: 15;
-    
+    @extend .glass-decoration;
+    @extend .glass-decoration--bottom;
+    padding: .5em;
 }
-
 .header{
     &-logo {
         width: 200px;
         display: inline-block;
         margin: 1rem;
     }
-
+    
     &-nav {
+        .app-nav-item .nav-link{
+            color: $color-white !important;
+        }
+
         .app-nav-item:hover {
             border-bottom: 3px solid $color-white !important;
         }
-    
+        
         &.navbar-nav {
             margin-left: auto;
         }
     }
-}
-.nav-background {
-    background-color: $color-gray !important;
-    padding: 1rem 2rem;
 }
 .app-nav-item{
     text-align: center;
@@ -63,9 +67,7 @@ header {
 }
 
 @media screen and (max-width: 576px) { 
-    header {
-        flex-direction: column;
-        align-items: center;
+    .header {
         &-logo {
             width: 50%;
         }
@@ -74,24 +76,34 @@ header {
 
 @media screen and (max-width: 992px) { 
     .navbar-sm-header {
-        background-color: $color-gray;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row, space-between, auto, center);
+        @extend .glass-decoration;
+        // @extend .glass-decoration--bottom;
+        box-shadow: 0px 3px 3px #00000080;
     }
     .nav-links {
-        background-color: $color-white !important;
+        background-image: url('../assets/background.jpg');    
+        background-attachment: fixed;
+        background-size: cover;
         width: 100%;
     }
     .navbar-nav.header-nav {
         margin: auto;
     }
     .nav-link {
-        color: $color-black !important;
+        // color: $color-black !important;
         font-size: 25px;
     }
     .navbar-sm-footer {
         display: block;
+    }
+    .header-nav {
+        .app-nav-item {
+            border-bottom: 3px solid transparent;
+            &:hover {
+                border-bottom: 3px solid $color-white !important;
+            }
+        }
     }
 }
 
@@ -99,19 +111,17 @@ header {
 
 /* -------- FOOTER STYLES -------- */
 footer {
-    background-color: $color-gray;
+    @include flex(column);
+    @extend .glass-decoration;
+    @extend .glass-decoration--top;
     color: $color-white;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 .footer {
     &-info {
         padding: 1em 2em;
-        display: flex;
-        align-content: space-between;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row, space-between, space-between, center)
+        
     }
     &-logo{
         width: 110px;
@@ -122,7 +132,7 @@ footer {
         
         .app-nav-item {
             margin: 0;
-            border-right: solid 1px $color-white;
+            border-right: solid 1px #16191ddd;
         }
 
         :last-child {
@@ -139,9 +149,8 @@ footer {
     }
 
     &-social{
-        display: flex;
-        align-content: space-between;
-        justify-content: space-between;
+        @include flex(row, space-between, space-between);
+
         width: 110px;
 
         &__icon {
@@ -163,7 +172,7 @@ footer {
         margin: 0 2em;
         padding: 1em 2em;
         text-align: center;
-        border-top: 2px solid $color-white
+        border-top: 3px solid #16191ddd
     }
 
 }
@@ -192,28 +201,26 @@ h1 {
 h1, h2, h3, h4 {
     padding: 0.5em;
     border-radius: $border-radius;
-    border: $border-thin;
     background: $color-white;
     text-align: center;
-    border-top: $border-bold;
+    @extend .glass-decoration--top
 }
 .title {
     &-block {
-        display: flex;
-        flex-direction: column;
+        @include flex(column, auto, auto, center);
+
         transform: perspective(50px) rotatex(-1deg) translateZ(8px) translate(0, -5px);
         width: 80%;
         margin: 1rem auto 4rem;
-        align-items: center;
     }
     &-decoration {
         border-radius: $border-radius;
         width: 80%;
         margin-top: -20px;
         height: 40px;
-        background-color: $color-gray;
         z-index: 1;
-        border-top: $border-bold;
+        @extend .glass-decoration;
+        @extend .glass-decoration--top;
     }
 }
 .rg-btn {
@@ -222,7 +229,7 @@ h1, h2, h3, h4 {
     cursor: pointer;
 }
 .text-block {
-    display: flex;
+    @include flex();
 }
 .text-block p{
     background: $color-white;
@@ -253,18 +260,16 @@ h1, h2, h3, h4 {
 /* ---------- FORMS ---------------- */
 .form-row {
     margin: .5em 0;
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     label:first-child{
         display: block;
         margin-bottom: 10px
     }
 }
 .control-radio-options {
-    display: flex;
+    @include flex(column, space-between, auto, flex-start);
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
+
     label{
         margin-right: 1em
     }
