@@ -8,7 +8,6 @@
     }
     &__image {
         width: 400px;
-        border: $border-normal;
         border-radius: $border-radius;
         transform: perspective(50px) rotateY(1deg);
         animation: rotate-left-back .7s;
@@ -26,10 +25,9 @@
         height: 455px;
         border-radius: $border-radius;
         top: 215px;
-        background-color: $color-dark;
         z-index: 1;
-        -webkit-transform: perspective(50px) rotateY(-.35deg);
-        border-right: $border-bold;
+        @extend .glass;
+        @include tiltObject(right);
     }
 }
 
@@ -48,7 +46,6 @@
     &__image {
         width: 400px;
         height: 400px;
-        border: $border-normal;
         border-radius: $border-radius;
         transform: perspective(50px) rotateY(-1deg);
         animation: rotate-right-back .7s;
@@ -60,10 +57,9 @@
     &__decoration {
         position: absolute;
         border-radius: $border-radius;
-        background-color: $color-gray;
         display: none;
-        -webkit-transform: perspective(50px) rotateY(-.35deg);
-        border-right: $border-bold;
+        @extend .glass-decoration;
+        @include tiltObject(left);
     }
 }
 
@@ -79,9 +75,8 @@
         border-radius: $border-radius;
         top: -100px;
         right: 11rem;
-        background-color: $color-gray;
-        -webkit-transform: perspective(50px) rotateY(.35deg);
-        border-left: $border-bold;
+        @extend .glass-decoration;
+        @include tiltObject(left);
     }
     &>.text-block{
         max-width: 780px;

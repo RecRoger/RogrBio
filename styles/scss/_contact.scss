@@ -9,7 +9,6 @@
         
     }
     &__image {
-        border: $border-normal;
         border-radius: $border-radius;
         min-height: 400px;
         min-width: 400px;
@@ -25,14 +24,13 @@
     }
     &__decoration {
         border-radius: $border-radius;
-        position: absolute;
-        background-color: $color-dark;
+        position: absolute !important;
         width: 60%;
         height: 100%;
         top: -1rem;
         z-index: 1 !important;
-        -webkit-transform: perspective(50px) rotateY(-.35deg);
-        border-right: $border-bold;
+        @extend .glass-decoration;
+        @include tiltObject(right);
     }
 }
 
@@ -42,14 +40,11 @@
     width: 450px;
     padding: 1em 1.5em;
     flex-wrap: wrap;
-    background: $color-white;
-    border: $border-normal;
     border-radius: $border-radius;
     position: relative;
     &__container{
         max-width: 716px;
-        background-color: $color-white;
-        border: $border-bold;
+        background-color: $color-white-transparent;
         border-radius: $border-radius;
         padding: 3rem 2rem 2rem;
         margin: 0 3rem;
@@ -61,7 +56,7 @@
 
 
 .contact-decoration {
-    position: absolute;
+    position: absolute !important;
     border-radius: $border-radius;
     z-index: -1 !important;
     &-section {
@@ -70,25 +65,22 @@
         overflow: hidden;
     }
     &.decoration-1 {
-        background-color: $color-dark;
         height: 50%;
         width: 50%;
         top: 5em;
         left: 14em;
-        -webkit-transform: perspective(50px) rotateY(.35deg);
-        border-left: $border-bold;
+        @extend .glass-decoration-dark;
+        @include tiltObject(left);
     }
     &.decoration-2 {
-        background-color: $color-gray;
         height: 70%;
         width: 50%;
         bottom: 2em;
         right: 13em;
-        -webkit-transform: perspective(50px) rotateY(-.35deg);
-        border-right: $border-bold;
+        @extend .glass-decoration;
+        @include tiltObject(right);
     }
     &__image {
-        border: $border-thin;
         border-radius: $border-radius;
         z-index: 3;
         left: 25%;
@@ -157,8 +149,7 @@
             width: 45%;
             height: 70%;
             right: 9rem;
-            -webkit-transform: perspective(50px) rotateX(0) rotateY(-.35deg);
-            border-right: 3px solid black;
+            @include tiltObject(right)
         }
     }
     .contact-form__title{

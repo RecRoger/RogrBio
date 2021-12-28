@@ -6,7 +6,6 @@
 
     &__image {
         width: 350px;
-        border: $border-normal;
         border-radius: $border-radius;
         transform: perspective(50px) rotateY(1deg);
         animation: rotate-left-back .7s;
@@ -22,21 +21,19 @@
     &__decoration{
         border-radius: $border-radius;
         position: absolute;
-        background-color: $color-gray;
         width: 55%;
         height: 100%;
         bottom: -9em;
         z-index: 1 !important;
-        -webkit-transform: perspective(50px) rotateX(.35deg);
-        border-bottom: $border-bold;
+        @extend .glass-decoration;
+        @include tiltObject(top);
         &-sm {
             display: none;
             border-radius: $border-radius;
             position: absolute;
-            background-color: $color-dark;
             z-index: 2 !important;
-            -webkit-transform: perspective(50px) rotateX(.35deg);
-            border-bottom: $border-bold;
+            @extend .glass-decoration;
+            @include tiltObject(bottom);
         }
     }
 }
@@ -48,7 +45,7 @@
     }
     &__card {
         @include flex(column, inherit, inherit, center);
-        width: 25%;
+        width: 30%;
         position: relative;
         transform: perspective(50px) rotateX(-1deg);
         transform-origin: top;
@@ -64,7 +61,7 @@
     }
     &__decoration {
         position: absolute;
-        background-color: $color-gray;
+        @extend .glass-decoration;
         width: 100%;
         height: 80%;
         top: 1em;
@@ -72,7 +69,7 @@
         &-sm {
             display: none;
             position: absolute;
-            background-color: $color-dark;
+            @extend .glass-decoration;
             z-index: -1;
             width: 50%;
             height: 60%;
@@ -84,7 +81,6 @@
         padding: 0 1em;
         background-color: $color-white;
         width: 70%;
-        border: $border-normal;
         text-align: center;
         border-radius: $border-radius;
         margin-top: 1rem;

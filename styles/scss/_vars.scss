@@ -1,10 +1,13 @@
  $color-black: #000000;
+ $color-black-transparent: #00000080;
  $color-white: #ffffff;
- $color-light: #ffeb3b;
+ $color-white-transparent: #ffffff80;
  $color-gray: #35393C;
+ $color-gray-transparent: #35393C80;
  $color-dark: #16191d;
+ $color-dark-transparent: #16191ddd;
+ $color-light: #ffeb3b;
 
- $border-thin: 1px solid $color-black;
- $border-normal: 2px solid $color-black;
  $border-bold: 3px solid $color-black;
  $border-radius: 3px;
+ $border-radius-xl: 8px;

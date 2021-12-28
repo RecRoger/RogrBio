@@ -11,7 +11,6 @@
     
     &__image {
         width: 350px;
-        border: $border-normal;
         border-radius: $border-radius;
         transform: perspective(50px) rotateY(-1deg);
         animation: rotate-right-back .7s;
@@ -30,9 +29,8 @@
         height: 120%;
         top: -1rem;
         z-index: 1 !important;
-        -webkit-transform: perspective(50px) rotateY(.3deg);
         @extend .glass-decoration;
-        @extend .glass-decoration--left;
+        @include tiltObject(left);
     }
 }
 
@@ -48,9 +46,8 @@
         border-radius: $border-radius;
         margin: -20px auto;
         z-index: 1;
-        -webkit-transform: perspective(50px) rotateY(-.35deg);
         @extend .glass-decoration;
-        @extend .glass-decoration--right;
+        @include tiltObject(right);
     }
     &__galery{
         @include flex(row, space-evenly);
@@ -65,7 +62,6 @@
     border-radius: $border-radius;
     width: 310px;
     height: 220px;
-    border: $border-normal;
     background: $color-white;
     &__1{
         background: url('https://picsum.photos/310/220') $color-white;
@@ -103,7 +99,6 @@
             width: 70%;
         }
         &__image {
-            /* transform: perspective(50px) rotateY(0); */
             width: 70%;
         }
     }

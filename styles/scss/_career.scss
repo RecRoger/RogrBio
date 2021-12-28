@@ -1,22 +1,24 @@
 /* ----------- CAREER STYLES --------- */
-
 .experience-section {
     &__container {
-        background: $color-gray;
         margin: 3em auto 0;
         width: 70%;
         padding: 1.5em 2em 6em;
         border-radius: $border-radius;
+        @extend .glass-decoration;
     }
     &__info {
         @include flex(column);
-        background: $color-white;
+        @extend .glass-decoration-light;
         border-radius: $border-radius;
     }
     &__timeline {
         width: 100%;
         margin: 0 auto;
         padding: 3.5em 0 1.5em;
+        &:before {
+            display: none;
+        }
         &>div{
             @include flex(row, space-between, inherit, center);
             margin: 0 4em 0 1rem;
@@ -30,19 +32,20 @@
             background: $color-white;
             border-radius: 50%;
             z-index: 4;
-            border: $border-bold;
             margin-top: -20px;
             &>span{
+                @extend .glass-decoration-light;
                 display: block;
                 margin-top: -3em;
                 width: 58px;
-                border: $border-normal;
-                background-color: $color-white;
                 padding: .3rem .5rem;
                 margin-left: 1em;
             } 
             &.active {
                 background:  $color-light;
+                &>span{
+                    background-color: $color-white;
+                }
             }
         }
     }
@@ -63,19 +66,15 @@
     }
     &__decoration { 
         position: absolute;
-        background: $color-dark;
         border-radius: $border-radius;
         display: none;
-        border-right: $border-bold;
         z-index: -1;
-        -webkit-transform: perspective(50px) rotateY(-.35deg);
+        
+        @extend .glass-decoration-dark;
+        @include tiltObject(right);
+        
     }
 }
-
-
-
-
-
 
 .projects-section {
     @include flex(column);
@@ -95,26 +94,24 @@
         @include flex(row, space-around, inherit, center);        
     }
     &__decoration {
-        position: absolute;
-        border-radius: 3px;
+        position: absolute !important;
+        border-radius: $border-radius;
         z-index: 1 !important;
         &.decoration-1 {
-            background-color: #16191d;
             height: 316px;
             width: 567px;
             top: 1em;
             left: 14em;
-            -webkit-transform: perspective(50px) rotateY(.35deg);
-            border-left: 5px solid #35393C;
+            @extend .glass-decoration-dark;
+            @include tiltObject(left);
         }
         &.decoration-2 {
-            background-color: #35393C;
             height: 226px;
             width: 424px;
             bottom: 1em;
             right: 10em;
-            -webkit-transform: perspective(50px) rotateY(-.35deg);
-            border-right: 3px solid black;
+            @extend .glass-decoration;
+            @include tiltObject(right);
         }
     }
 }
@@ -180,7 +177,9 @@
 @media screen and (max-width: 996px) {
     .experience-section {
         &__container {
-            background-color: transparent;
+            &:before {
+                display: none !important;
+            }
             margin: 0;
             width: 100%;
             padding: 0;
@@ -192,21 +191,22 @@
             top: 8rem;
             left: 2rem
         }
-        &__image{
-            border: $border-normal;
-        }
         &__info{
             @include flex(row);
-            background-color: transparent;
+            &:before {
+                display: none !important;
+            }
         }
         &__timeline {
             width: 30%;
             overflow: visible !important;
             padding: 4rem 0em 2.5em;
-            background: $color-gray;
             border-radius: $border-radius;
-            -webkit-transform: perspective(50px) rotateY(.35deg);
-            border-left: $border-bold;
+            &:before {
+                display: block !important;
+            }
+            @extend .glass-decoration;
+            @include tiltObject(left);
             &>div {
                 @include flex(column);
                 height: 90%;

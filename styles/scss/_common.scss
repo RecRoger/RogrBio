@@ -22,7 +22,7 @@ a:hover {
 header {
     z-index: 15;
     @extend .glass-decoration;
-    @extend .glass-decoration--bottom;
+    @include tiltObject(bottom, false);
     padding: .5em;
 }
 .header{
@@ -78,8 +78,8 @@ header {
     .navbar-sm-header {
         @include flex(row, space-between, auto, center);
         @extend .glass-decoration;
-        // @extend .glass-decoration--bottom;
-        box-shadow: 0px 3px 3px #00000080;
+        @include tiltObject(bottom, false);
+        box-shadow: 0px 3px 3px $color-black-transparent;
     }
     .nav-links {
         background-image: url('../assets/background.jpg');    
@@ -113,7 +113,7 @@ header {
 footer {
     @include flex(column);
     @extend .glass-decoration;
-    @extend .glass-decoration--top;
+    @include tiltObject(top, false);
     color: $color-white;
     width: 100%;
 }
@@ -132,7 +132,7 @@ footer {
         
         .app-nav-item {
             margin: 0;
-            border-right: solid 1px #16191ddd;
+            border-right: solid 1px $color-dark-transparent;
         }
 
         :last-child {
@@ -168,11 +168,11 @@ footer {
 
     }
     &-signature {
+        @extend .glass;
+        @include tiltObject(top);
         font-size: 12px;
-        margin: 0 2em;
         padding: 1em 2em;
         text-align: center;
-        border-top: 3px solid #16191ddd
     }
 
 }
@@ -203,7 +203,7 @@ h1, h2, h3, h4 {
     border-radius: $border-radius;
     background: $color-white;
     text-align: center;
-    @extend .glass-decoration--top
+    @include tiltObject(top, false);
 }
 .title {
     &-block {
@@ -220,7 +220,7 @@ h1, h2, h3, h4 {
         height: 40px;
         z-index: 1;
         @extend .glass-decoration;
-        @extend .glass-decoration--top;
+        @include tiltObject(top, false);
     }
 }
 .rg-btn {
@@ -236,7 +236,6 @@ h1, h2, h3, h4 {
     margin: auto;
     padding: 4em;
     border-radius: $border-radius;
-    border: $border-normal;
 }
 @media screen and (max-width: 576px) { 
     .text-block p{

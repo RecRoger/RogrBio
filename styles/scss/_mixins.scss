@@ -6,6 +6,30 @@
     align-items: $items;
 }
 
+@mixin tiltObject($direction, $rotate: true) {
+    @if $direction == top {
+        box-shadow: 0px -3px 3px $color-black-transparent;
+        @if $rotate == true {
+            -webkit-transform: perspective(50px) rotateX(-.35deg);
+            border-top: 3px solid $color-black-transparent;
+        }
+    } @else if $direction == bottom {
+        box-shadow: 0px 3px 3px $color-black-transparent;
+        @if $rotate == true {
+            -webkit-transform: perspective(50px) rotateX(.35deg);
+            border-bottom: 3px solid $color-black-transparent;
+        }
+    } @else if $direction == left {
+        box-shadow: -3px 0px 3px $color-black-transparent;
+        -webkit-transform: perspective(50px) rotateY(.35deg);
+        border-left: 3px solid $color-black-transparent;
+    } @else if $direction == right {
+        box-shadow: 3px 0px 3px $color-black-transparent;
+        border-right: 3px solid $color-black-transparent;
+        -webkit-transform: perspective(50px) rotateY(-.35deg);
+    }
+}
+
 .glass{
     overflow: hidden;
     position: relative;
@@ -20,26 +44,18 @@
         left: 0;
         right: 0;
         bottom: 0;
-        filter: blur(10px);
         margin: -20px;
+    }
+}
+
+.reset-glass{
+    &:before {
+        display: none !important;
     }
 }
 
 .glass-decoration {  
     @extend .glass;
-
-    &--top {
-        box-shadow: 0px -3px 3px #00000080;
-    }
-    &--bottom {
-        box-shadow: 0px 3px 3px #00000080;
-    }
-    &--right {
-        box-shadow: 3px 0px 3px #00000080;
-    }
-    &--left {
-        box-shadow: -3px 0px 3px #00000080;
-    }
     
     &-light {
         @extend .glass;
