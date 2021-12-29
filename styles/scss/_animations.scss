@@ -1,3 +1,44 @@
+// Animated Classes
+.animation {
+    &-tilt {
+        
+        &--up { }
+        &--down {
+            transform: perspective(50px) rotateX(-1deg);
+            transform-origin: top;
+            animation: rotate-bottom-back .3s;
+            &:hover {
+                animation: rotate-bottom .5s;
+                transform-origin: top;
+                transform: perspective(50px) rotateX(0);
+            }
+        }
+        &--left { 
+            @include tiltObject(left, false);
+            transform: perspective(50px) rotateY(1deg);
+            animation: rotate-left-back .7s;
+            &:hover {
+                @include resetTilt();
+                animation: rotate-left 1s;
+                transform: perspective(50px) rotateY(0);
+            }
+        }
+        &--right {
+            @include tiltObject(right, false);
+            transform: perspective(50px) rotateY(-1deg);
+            animation: rotate-right-back .7s;
+            
+            &:hover {
+                @include resetTilt();
+                animation: rotate-right 1s;
+                transform: perspective(50px) rotateY(0);
+            }
+        }
+        
+
+    }
+}
+
 /***** Animations *****/
 @keyframes rotate-right {
     0% {

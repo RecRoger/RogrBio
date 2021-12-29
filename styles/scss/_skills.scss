@@ -7,12 +7,7 @@
     &__image {
         width: 350px;
         border-radius: $border-radius;
-        transform: perspective(50px) rotateY(1deg);
-        animation: rotate-left-back .7s;
-        &:hover {
-            animation: rotate-left 1s;
-            transform: perspective(50px) rotateY(0);
-        }
+        @extend .animation-tilt--left;
     }
     &__text {
         max-width: 400px;
@@ -47,14 +42,8 @@
         @include flex(column, inherit, inherit, center);
         width: 30%;
         position: relative;
-        transform: perspective(50px) rotateX(-1deg);
-        transform-origin: top;
-        animation: rotate-bottom-back .3s;
-        &:hover {
-            animation: rotate-bottom .5s;
-            transform-origin: top;
-            transform: perspective(50px) rotateX(0);
-        }
+        @extend .animation-tilt--down;
+
         h4 {
             z-index: 4;
         }

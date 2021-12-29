@@ -8054,6 +8054,62 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+.glass, .glass-decoration, header, .navbar-sm-header, footer, .title-decoration, .main-info__decoration, .jobs-section__decoration, .interests-section__decoration, .about-close-section__decoration, .studies-info__decoration, .studies-info__decoration-sm, .skills-section__decoration, .skills-section__decoration-sm, .experience-section__container, .projects-section__decoration.decoration-2, .experience-section__timeline, .contact-section__decoration, .contact-decoration.decoration-2, .glass-decoration-light, .experience-section__info, .experience-section__timeline-item > span, .glass-decoration-dark, .experience-section__decoration, .projects-section__decoration.decoration-1, .contact-decoration.decoration-1, .footer-signature, .about-section__decoration {
+  overflow: hidden;
+  position: relative; }
+  .glass:before, .glass-decoration:before, header:before, .navbar-sm-header:before, footer:before, .title-decoration:before, .main-info__decoration:before, .jobs-section__decoration:before, .interests-section__decoration:before, .about-close-section__decoration:before, .studies-info__decoration:before, .studies-info__decoration-sm:before, .skills-section__decoration:before, .skills-section__decoration-sm:before, .experience-section__container:before, .projects-section__decoration.decoration-2:before, .experience-section__timeline:before, .contact-section__decoration:before, .contact-decoration.decoration-2:before, .glass-decoration-light:before, .experience-section__info:before, .experience-section__timeline-item > span:before, .glass-decoration-dark:before, .experience-section__decoration:before, .projects-section__decoration.decoration-1:before, .contact-decoration.decoration-1:before, .footer-signature:before, .about-section__decoration:before {
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8) !important;
+    filter: blur(10px);
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -20px; }
+
+.reset-glass:before {
+  display: none !important; }
+
+.glass-decoration-light:before, .experience-section__info:before, .experience-section__timeline-item > span:before {
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5) !important; }
+
+.glass-decoration-dark:before, .experience-section__decoration:before, .projects-section__decoration.decoration-1:before, .contact-decoration.decoration-1:before {
+  box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8) !important; }
+
+.animation-tilt--down, .skills-section__card {
+  transform: perspective(50px) rotateX(-1deg);
+  transform-origin: top;
+  animation: rotate-bottom-back .3s; }
+  .animation-tilt--down:hover, .skills-section__card:hover {
+    animation: rotate-bottom .5s;
+    transform-origin: top;
+    transform: perspective(50px) rotateX(0); }
+
+.animation-tilt--left, .job-img__1, .about-section__image, .studies-info__image, .experience-section__image, .contact-section__image {
+  box-shadow: -3px 0px 3px #00000080;
+  transform: perspective(50px) rotateY(1deg);
+  animation: rotate-left-back .7s; }
+  .animation-tilt--left:hover, .job-img__1:hover, .about-section__image:hover, .studies-info__image:hover, .experience-section__image:hover, .contact-section__image:hover {
+    box-shadow: 0px 0px 0px transparent !important;
+    -webkit-transform: perspective(0px) rotate(0deg, 0deg) !important;
+    border: 0px solid transparent !important;
+    animation: rotate-left 1s;
+    transform: perspective(50px) rotateY(0); }
+
+.animation-tilt--right, .main-info__image, .job-img__3, .interests-section__image {
+  box-shadow: 3px 0px 3px #00000080;
+  transform: perspective(50px) rotateY(-1deg);
+  animation: rotate-right-back .7s; }
+  .animation-tilt--right:hover, .main-info__image:hover, .job-img__3:hover, .interests-section__image:hover {
+    box-shadow: 0px 0px 0px transparent !important;
+    -webkit-transform: perspective(0px) rotate(0deg, 0deg) !important;
+    border: 0px solid transparent !important;
+    animation: rotate-right 1s;
+    transform: perspective(50px) rotateY(0); }
+
 /***** Animations *****/
 @keyframes rotate-right {
   0% {
@@ -8111,31 +8167,6 @@ textarea.form-control-lg {
   100% {
     -webkit-transform: perspective(50px) rotateX(-1deg);
     transform: perspective(50px) rotateX(-1deg); } }
-
-.glass, .glass-decoration, header, .navbar-sm-header, footer, .title-decoration, .main-info__decoration, .jobs-section__decoration, .interests-section__decoration, .about-close-section__decoration, .studies-info__decoration, .studies-info__decoration-sm, .skills-section__decoration, .skills-section__decoration-sm, .experience-section__container, .projects-section__decoration.decoration-2, .experience-section__timeline, .contact-section__decoration, .contact-decoration.decoration-2, .glass-decoration-light, .experience-section__info, .experience-section__timeline-item > span, .glass-decoration-dark, .experience-section__decoration, .projects-section__decoration.decoration-1, .contact-decoration.decoration-1, .footer-signature, .about-section__decoration {
-  overflow: hidden;
-  position: relative; }
-  .glass:before, .glass-decoration:before, header:before, .navbar-sm-header:before, footer:before, .title-decoration:before, .main-info__decoration:before, .jobs-section__decoration:before, .interests-section__decoration:before, .about-close-section__decoration:before, .studies-info__decoration:before, .studies-info__decoration-sm:before, .skills-section__decoration:before, .skills-section__decoration-sm:before, .experience-section__container:before, .projects-section__decoration.decoration-2:before, .experience-section__timeline:before, .contact-section__decoration:before, .contact-decoration.decoration-2:before, .glass-decoration-light:before, .experience-section__info:before, .experience-section__timeline-item > span:before, .glass-decoration-dark:before, .experience-section__decoration:before, .projects-section__decoration.decoration-1:before, .contact-decoration.decoration-1:before, .footer-signature:before, .about-section__decoration:before {
-    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8) !important;
-    filter: blur(10px);
-    content: "";
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: -20px; }
-
-.reset-glass:before {
-  display: none !important; }
-
-.glass-decoration-light:before, .experience-section__info:before, .experience-section__timeline-item > span:before {
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5) !important; }
-
-.glass-decoration-dark:before, .experience-section__decoration:before, .projects-section__decoration.decoration-1:before, .contact-decoration.decoration-1:before {
-  box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8) !important; }
 
 /* -------- COMMON STYLES -------- */
 * {
@@ -8400,12 +8431,7 @@ h1, h2, h3, h4 {
   margin: 3em 0; }
   .main-info__image {
     width: 350px;
-    border-radius: 3px;
-    transform: perspective(50px) rotateY(-1deg);
-    animation: rotate-right-back .7s; }
-    .main-info__image:hover {
-      animation: rotate-right 1s;
-      transform: perspective(50px) rotateY(0); }
+    border-radius: 3px; }
   .main-info__text {
     width: 400px; }
   .main-info__decoration {
@@ -8453,23 +8479,11 @@ h1, h2, h3, h4 {
   height: 220px;
   background: #ffffff; }
   .job-img__1 {
-    background: url("https://picsum.photos/310/220") #ffffff;
-    transform: perspective(50px) rotateY(1deg);
-    animation: rotate-left-back .7s; }
-    .job-img__1:hover {
-      /* transition: all .25s ease-in; */
-      animation: rotate-left 1s;
-      transform: perspective(50px) rotateY(0); }
+    background: url("https://picsum.photos/310/220") #ffffff; }
   .job-img__2 {
     background: url("https://picsum.photos/310/230") #ffffff; }
   .job-img__3 {
-    background: url("https://picsum.photos/310/240") #ffffff;
-    transform: perspective(50px) rotateY(-1deg);
-    animation: rotate-right-back .7s; }
-    .job-img__3:hover {
-      /* transition: all .25s ease-in; */
-      animation: rotate-right 1s;
-      transform: perspective(50px) rotateY(0); }
+    background: url("https://picsum.photos/310/240") #ffffff; }
   .job-img > span {
     display: none; }
 
@@ -8507,14 +8521,10 @@ h1, h2, h3, h4 {
     margin-bottom: 1.5rem; } }
 
 @media screen and (max-width: 996px) {
-  .job-img__3 {
-    display: none; }
   .job-img__2 {
-    transform: perspective(50px) rotateY(-1deg);
-    animation: rotate-right-back .7s; }
-    .job-img__2:hover {
-      animation: rotate-right 1s;
-      transform: perspective(50px) rotateY(0); } }
+    display: none; }
+  .job-img__3 {
+    display: block !important; } }
 
 /* ----------- ABOUT US STYLES --------- */
 .about-section {
@@ -8532,12 +8542,7 @@ h1, h2, h3, h4 {
     align-items: inherit; }
   .about-section__image {
     width: 400px;
-    border-radius: 3px;
-    transform: perspective(50px) rotateY(1deg);
-    animation: rotate-left-back .7s; }
-    .about-section__image:hover {
-      animation: rotate-left 1s;
-      transform: perspective(50px) rotateY(0); }
+    border-radius: 3px; }
   .about-section__text {
     width: 400px; }
   .about-section__decoration {
@@ -8567,12 +8572,7 @@ h1, h2, h3, h4 {
   .interests-section__image {
     width: 400px;
     height: 400px;
-    border-radius: 3px;
-    transform: perspective(50px) rotateY(-1deg);
-    animation: rotate-right-back .7s; }
-    .interests-section__image:hover {
-      animation: rotate-right 1s;
-      transform: perspective(50px) rotateY(0); }
+    border-radius: 3px; }
   .interests-section__decoration {
     position: absolute;
     border-radius: 3px;
@@ -8685,12 +8685,7 @@ h1, h2, h3, h4 {
   margin: 3em 0; }
   .studies-info__image {
     width: 350px;
-    border-radius: 3px;
-    transform: perspective(50px) rotateY(1deg);
-    animation: rotate-left-back .7s; }
-    .studies-info__image:hover {
-      animation: rotate-left 1s;
-      transform: perspective(50px) rotateY(0); }
+    border-radius: 3px; }
   .studies-info__text {
     max-width: 400px;
     margin-left: 5em; }
@@ -8732,14 +8727,7 @@ h1, h2, h3, h4 {
     align-content: inherit;
     align-items: center;
     width: 30%;
-    position: relative;
-    transform: perspective(50px) rotateX(-1deg);
-    transform-origin: top;
-    animation: rotate-bottom-back .3s; }
-    .skills-section__card:hover {
-      animation: rotate-bottom .5s;
-      transform-origin: top;
-      transform: perspective(50px) rotateX(0); }
+    position: relative; }
     .skills-section__card h4 {
       z-index: 4; }
   .skills-section__decoration {
@@ -9064,12 +9052,7 @@ h1, h2, h3, h4 {
   .contact-section__image {
     border-radius: 3px;
     min-height: 400px;
-    min-width: 400px;
-    transform: perspective(50px) rotateY(1deg);
-    animation: rotate-left-back .7s; }
-    .contact-section__image:hover {
-      animation: rotate-left 1s;
-      transform: perspective(50px) rotateY(0); }
+    min-width: 400px; }
   .contact-section__text {
     margin-bottom: 2em; }
   .contact-section__decoration {

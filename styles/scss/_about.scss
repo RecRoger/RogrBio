@@ -9,12 +9,7 @@
     &__image {
         width: 400px;
         border-radius: $border-radius;
-        transform: perspective(50px) rotateY(1deg);
-        animation: rotate-left-back .7s;
-        &:hover {
-            animation: rotate-left 1s;
-            transform: perspective(50px) rotateY(0);
-        }
+        @extend .animation-tilt--left;
     }
     &__text {
         width: 400px;
@@ -47,12 +42,7 @@
         width: 400px;
         height: 400px;
         border-radius: $border-radius;
-        transform: perspective(50px) rotateY(-1deg);
-        animation: rotate-right-back .7s;
-        &:hover {
-            animation: rotate-right 1s;
-            transform: perspective(50px) rotateY(0);
-        }
+        @extend .animation-tilt--right;
     }
     &__decoration {
         position: absolute;

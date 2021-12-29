@@ -12,12 +12,7 @@
     &__image {
         width: 350px;
         border-radius: $border-radius;
-        transform: perspective(50px) rotateY(-1deg);
-        animation: rotate-right-back .7s;
-        &:hover {
-            animation: rotate-right 1s;
-            transform: perspective(50px) rotateY(0);
-        }
+        @extend .animation-tilt--right;
     }
     &__text {
         width: 400px;
@@ -65,26 +60,15 @@
     background: $color-white;
     &__1{
         background: url('https://picsum.photos/310/220') $color-white;
-        transform: perspective(50px) rotateY(1deg);
-        animation: rotate-left-back .7s;
-        &:hover {
-            /* transition: all .25s ease-in; */
-            animation: rotate-left 1s;
-            transform: perspective(50px) rotateY(0);
-        }
+        @extend .animation-tilt--left;
     }
     &__2{
         background: url('https://picsum.photos/310/230') $color-white;
     }
     &__3{
         background: url('https://picsum.photos/310/240') $color-white;
-        transform: perspective(50px) rotateY(-1deg);
-        animation: rotate-right-back .7s;
-        &:hover {
-            /* transition: all .25s ease-in; */
-            animation: rotate-right 1s;
-            transform: perspective(50px) rotateY(0);
-        }
+        @extend .animation-tilt--right;
+        
     }
     &>span {
         display: none;
@@ -141,16 +125,11 @@
 }
 @media screen and (max-width: 996px) {
     .job-img{
-        &__3 {
+        &__2 {
             display: none;    
         }
-        &__2{
-            transform: perspective(50px) rotateY(-1deg);
-            animation: rotate-right-back .7s;
-            &:hover {
-                animation: rotate-right 1s;
-                transform: perspective(50px) rotateY(0);
-            }
+        &__3{
+            display: block !important;
         }
     }
 }

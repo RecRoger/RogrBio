@@ -59,6 +59,7 @@
         width: 350px;
         height: 350px;
         border-radius: $border-radius;
+        @extend .animation-tilt--left;
     }
     &__text {
         max-width: 350px;
@@ -91,7 +92,7 @@
         width: 400px;
     }
     &__carousel {
-        @include flex(row, space-around, inherit, center);        
+        @include flex(row, space-around, inherit, center);
     }
     &__decoration {
         position: absolute !important;
