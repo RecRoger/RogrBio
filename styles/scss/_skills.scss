@@ -10,8 +10,8 @@
         @extend .animation-tilt--left;
     }
     &__text {
-        max-width: 400px;
-        margin-left: 5em;
+        max-width: 900px;
+        margin-left: 2em;
     }
     &__decoration{
         border-radius: $border-radius;
@@ -70,13 +70,13 @@
         padding: 0 1em;
         background-color: $color-white;
         width: 70%;
-        text-align: center;
+        text-align: left;
         border-radius: $border-radius;
         margin-top: 1rem;
     }
     &__item {
         display: block;
-        margin: 1em 0;
+        margin: 1em 0 1.5em;
     }
 }
 

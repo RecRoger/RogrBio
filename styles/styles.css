@@ -8054,10 +8054,10 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
-.glass, .glass-decoration, header, .navbar-sm-header, footer, .title-decoration, .main-info__decoration, .jobs-section__decoration, .interests-section__decoration, .about-close-section__decoration, .studies-info__decoration, .studies-info__decoration-sm, .skills-section__decoration, .skills-section__decoration-sm, .experience-section__container, .projects-section__decoration.decoration-2, .experience-section__timeline, .contact-section__decoration, .contact-decoration.decoration-2, .glass-decoration-light, .experience-section__info, .experience-section__timeline-item > span, .glass-decoration-dark, .experience-section__decoration, .projects-section__decoration.decoration-1, .contact-decoration.decoration-1, .footer-signature, .about-section__decoration {
+.glass, .glass-decoration, header, .navbar-sm-header, footer, .title-decoration, .main-info__decoration, .jobs-section__decoration, .job-img .job-img__content, .interests-section__decoration, .about-close-section__decoration, .studies-info__decoration, .studies-info__decoration-sm, .skills-section__decoration, .skills-section__decoration-sm, .experience-section__container, .projects-section__decoration.decoration-2, .experience-section__timeline, .contact-section__decoration, .contact-decoration.decoration-2, .glass-decoration-light, .experience-section__info, .experience-section__timeline-item > span, .glass-decoration-dark, .experience-section__decoration, .projects-section__decoration.decoration-1, .contact-decoration.decoration-1, .footer-signature, .about-section__decoration {
   overflow: hidden;
   position: relative; }
-  .glass:before, .glass-decoration:before, header:before, .navbar-sm-header:before, footer:before, .title-decoration:before, .main-info__decoration:before, .jobs-section__decoration:before, .interests-section__decoration:before, .about-close-section__decoration:before, .studies-info__decoration:before, .studies-info__decoration-sm:before, .skills-section__decoration:before, .skills-section__decoration-sm:before, .experience-section__container:before, .projects-section__decoration.decoration-2:before, .experience-section__timeline:before, .contact-section__decoration:before, .contact-decoration.decoration-2:before, .glass-decoration-light:before, .experience-section__info:before, .experience-section__timeline-item > span:before, .glass-decoration-dark:before, .experience-section__decoration:before, .projects-section__decoration.decoration-1:before, .contact-decoration.decoration-1:before, .footer-signature:before, .about-section__decoration:before {
+  .glass:before, .glass-decoration:before, header:before, .navbar-sm-header:before, footer:before, .title-decoration:before, .main-info__decoration:before, .jobs-section__decoration:before, .job-img .job-img__content:before, .interests-section__decoration:before, .about-close-section__decoration:before, .studies-info__decoration:before, .studies-info__decoration-sm:before, .skills-section__decoration:before, .skills-section__decoration-sm:before, .experience-section__container:before, .projects-section__decoration.decoration-2:before, .experience-section__timeline:before, .contact-section__decoration:before, .contact-decoration.decoration-2:before, .glass-decoration-light:before, .experience-section__info:before, .experience-section__timeline-item > span:before, .glass-decoration-dark:before, .experience-section__decoration:before, .projects-section__decoration.decoration-1:before, .contact-decoration.decoration-1:before, .footer-signature:before, .about-section__decoration:before {
     box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8) !important;
     filter: blur(10px);
     content: "";
@@ -8375,7 +8375,8 @@ h1, h2, h3, h4 {
   background: #ffffff;
   margin: auto;
   padding: 4em;
-  border-radius: 3px; }
+  border-radius: 3px;
+  box-shadow: 1px 1px 8px #00000080; }
 
 @media screen and (max-width: 576px) {
   .text-block p {
@@ -8434,6 +8435,13 @@ h1, h2, h3, h4 {
     border-radius: 3px; }
   .main-info__text {
     width: 400px; }
+    .main-info__text-strong {
+      font-weight: bold;
+      color: #35393C; }
+    .main-info__text-colored {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #4b09a1; }
   .main-info__decoration {
     border-radius: 3px;
     position: absolute;
@@ -8477,15 +8485,35 @@ h1, h2, h3, h4 {
   border-radius: 3px;
   width: 310px;
   height: 220px;
-  background: #ffffff; }
+  background: #ffffff;
+  background-size: cover !important; }
   .job-img__1 {
-    background: url("https://picsum.photos/310/220") #ffffff; }
+    background: url("../assets/wordpress_1.png") #ffffff; }
   .job-img__2 {
-    background: url("https://picsum.photos/310/230") #ffffff; }
+    background: url("../assets/maps_1.jpg") #ffffff; }
   .job-img__3 {
-    background: url("https://picsum.photos/310/240") #ffffff; }
-  .job-img > span {
-    display: none; }
+    background: url("../assets/ICBC_bank.jfif") #ffffff; }
+  .job-img .job-img__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #ffffff;
+    transition: all .8s linear;
+    opacity: 0; }
+    .job-img .job-img__content-title {
+      font-weight: bold; }
+    .job-img .job-img__content-description {
+      text-align: right; }
+      .job-img .job-img__content-description span {
+        font-size: 14px;
+        font-weight: lighter; }
+  .job-img:hover > .job-img__content {
+    opacity: 1; }
 
 /***** Responsive Media Queries  *****/
 @media screen and (max-width: 576px) {
@@ -8687,8 +8715,8 @@ h1, h2, h3, h4 {
     width: 350px;
     border-radius: 3px; }
   .studies-info__text {
-    max-width: 400px;
-    margin-left: 5em; }
+    max-width: 900px;
+    margin-left: 2em; }
   .studies-info__decoration {
     border-radius: 3px;
     position: absolute;
@@ -8748,12 +8776,12 @@ h1, h2, h3, h4 {
     padding: 0 1em;
     background-color: #ffffff;
     width: 70%;
-    text-align: center;
+    text-align: left;
     border-radius: 3px;
     margin-top: 1rem; }
   .skills-section__item {
     display: block;
-    margin: 1em 0; }
+    margin: 1em 0 1.5em; }
 
 @media screen and (max-width: 576px) {
   .studies-info__text {
