@@ -8366,7 +8366,7 @@ h1, h2, h3, h4 {
 
 .text-block {
   display: flex;
-  flex-direction: "row";
+  flex-direction: column;
   justify-content: space-between;
   align-content: inherit;
   align-items: inherit; }
@@ -8882,12 +8882,11 @@ h1, h2, h3, h4 {
   flex-direction: row;
   justify-content: space-around;
   align-content: inherit;
-  align-items: inherit;
+  align-items: center;
   flex-wrap: wrap; }
 
 .experience-section__image {
   width: 350px;
-  height: 350px;
   border-radius: 3px; }
 
 .experience-section__text {
@@ -8928,6 +8927,8 @@ h1, h2, h3, h4 {
     justify-content: space-around;
     align-content: inherit;
     align-items: center; }
+    .projects-section__carousel-image {
+      max-width: 400px; }
   .projects-section__decoration {
     position: absolute !important;
     border-radius: 3px;
@@ -8960,6 +8961,8 @@ h1, h2, h3, h4 {
   .carousel-control {
     z-index: 10;
     font-size: 35px; }
+  .carousel-item:nth-child(odd) .projects-section__carousel {
+    flex-direction: row-reverse; }
   .carousel-control-icon {
     display: flex;
     flex-direction: row;
@@ -8985,16 +8988,22 @@ h1, h2, h3, h4 {
   .carousel {
     width: 100%;
     height: auto; }
-  .projects-section__text {
-    width: auto;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    width: 50%; }
-  .projects-section__carousel-image {
-    width: 70% !important;
-    height: auto !important;
-    margin-bottom: auto !important;
-    margin-right: -40% !important; } }
+    .carousel-item:nth-child(odd) .projects-section__carousel-image {
+      flex-direction: row-reverse;
+      margin-left: -40% !important; }
+    .carousel-item:nth-child(even) .projects-section__carousel-image {
+      margin-right: -40% !important; }
+  .projects-section {
+    margin: -4em 1.5em 1.5em; }
+    .projects-section__text {
+      width: auto;
+      margin-top: 3rem;
+      margin-left: 1rem;
+      width: 50%; }
+    .projects-section__carousel-image {
+      width: 70% !important;
+      height: auto !important;
+      margin-bottom: auto !important; } }
 
 @media screen and (max-width: 996px) {
   .experience-section__container {
@@ -9080,7 +9089,9 @@ h1, h2, h3, h4 {
   .contact-section__image {
     border-radius: 3px;
     min-height: 400px;
-    min-width: 400px; }
+    min-width: 400px;
+    max-width: 410px;
+    max-width: 410px; }
   .contact-section__text {
     margin-bottom: 2em; }
   .contact-section__decoration {
@@ -9119,12 +9130,12 @@ h1, h2, h3, h4 {
   border-radius: 3px;
   z-index: -1 !important; }
   .contact-decoration-section {
+    padding: 3.5rem !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: inherit;
     align-items: inherit;
-    padding-left: 4rem;
     overflow: hidden; }
   .contact-decoration.decoration-1 {
     height: 50%;
@@ -9142,11 +9153,11 @@ h1, h2, h3, h4 {
     box-shadow: 3px 0px 3px #00000080;
     border-right: 3px solid #00000080;
     -webkit-transform: perspective(50px) rotateY(-0.35deg); }
-  .contact-decoration__image {
-    border-radius: 3px;
+  .contact-decoration__game {
     z-index: 3;
-    left: 25%;
-    width: 50%; }
+    left: 15%;
+    width: 70%;
+    min-height: 400px; }
 
 @media screen and (max-width: 576px) {
   .contact-section__data {
@@ -9162,13 +9173,19 @@ h1, h2, h3, h4 {
   .contact-form {
     width: 100% !important; }
     .contact-form__title {
-      margin-top: 1rem !important; } }
+      margin-top: 1rem !important; }
+    .contact-form__container {
+      padding: 4.5rem 1rem 1rem; } }
 
 @media screen and (max-width: 768px) {
   .contact-form {
     width: 80%; }
     .contact-form__title {
-      margin-top: 0rem !important; } }
+      margin-top: 0rem !important; }
+  .contact-decoration__game {
+    left: 10%;
+    width: 80%;
+    min-height: 200px; } }
 
 @media screen and (max-width: 996px) {
   .contact-section {
@@ -9184,7 +9201,7 @@ h1, h2, h3, h4 {
       min-height: auto;
       min-width: auto; }
     .contact-section__text {
-      width: 60%;
+      width: 50%;
       align-self: end;
       margin-top: -190px;
       z-index: 3;

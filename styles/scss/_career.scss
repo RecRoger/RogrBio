@@ -52,12 +52,11 @@
     &__data {
         position: relative;
         padding: 2em;
-        @include flex(row, space-around);
+        @include flex(row, space-around, inherit, center);
         flex-wrap: wrap;
     }
     &__image {
         width: 350px;
-        height: 350px;
         border-radius: $border-radius;
         @extend .animation-tilt--left;
     }
@@ -93,6 +92,9 @@
     }
     &__carousel {
         @include flex(row, space-around, inherit, center);
+        &-image {
+            max-width: 400px;
+        }
     }
     &__decoration {
         position: absolute !important;
@@ -126,9 +128,11 @@
         z-index: 10;
         font-size: 35px;
     }
+    &-item:nth-child( odd ) .projects-section__carousel{
+        flex-direction: row-reverse;
+    }
     &-control-icon {
         @include flex(row, center, center, center);
-        
         color: $color-black;
         background: $color-white;
         width: 50px;
@@ -159,8 +163,16 @@
     .carousel {
         width: 100%;
         height: auto;
+        &-item:nth-child( odd ) .projects-section__carousel-image{
+            flex-direction: row-reverse;
+            margin-left: -40% !important;
+        }
+        &-item:nth-child( even ) .projects-section__carousel-image{
+            margin-right: -40% !important;
+        }
     }
     .projects-section { 
+        margin: -4em 1.5em 1.5em;
         &__text {
             width: auto;
             margin-top: 3rem;
@@ -171,7 +183,6 @@
             width: 70% !important;
             height: auto !important;
             margin-bottom: auto !important;
-            margin-right: -40% !important;
         }
     }
 }
@@ -220,8 +231,6 @@
         }
 
     }
-
-
 
     .projects-section {
         margin-top: -1rem;

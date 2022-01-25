@@ -12,6 +12,8 @@
         border-radius: $border-radius;
         min-height: 400px;
         min-width: 400px;
+        max-width: 410px;
+        max-width: 410px;
         @extend .animation-tilt--left;
     }
     &__text {
@@ -54,9 +56,10 @@
     position: absolute !important;
     border-radius: $border-radius;
     z-index: -1 !important;
+    
     &-section {
+        padding: 3.5rem !important;
         @include flex(row, center);
-        padding-left: 4rem;
         overflow: hidden;
     }
     &.decoration-1 {
@@ -75,11 +78,11 @@
         @extend .glass-decoration;
         @include tiltObject(right);
     }
-    &__image {
-        border-radius: $border-radius;
+    &__game {
         z-index: 3;
-        left: 25%;
-        width: 50%;
+        left: 15%;
+        width: 70%;
+        min-height: 400px;
     }
 }
 
@@ -106,6 +109,9 @@
         &__title{
             margin-top: 1rem !important;
         }
+        &__container {
+            padding: 4.5rem 1rem 1rem;
+        }
     }
 }
 @media screen and (max-width: 768px) {
@@ -114,6 +120,11 @@
         &__title{
             margin-top: 0rem !important;
         }
+    }
+    .contact-decoration__game {
+        left: 10%;
+        width: 80%;
+        min-height: 200px;
     }
 
 }
@@ -134,7 +145,7 @@
             min-width: auto;
         }
         &__text{
-            width: 60%;
+            width: 50%;
             align-self: end;
             margin-top: -190px;
             z-index: 3;
