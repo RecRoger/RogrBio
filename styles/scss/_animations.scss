@@ -2,7 +2,6 @@
 .animation {
     &-tilt {
         
-        &--up { }
         &--down {
             transform: perspective(50px) rotateX(-1deg);
             transform-origin: top;
